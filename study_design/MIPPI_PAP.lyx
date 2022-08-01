@@ -1,0 +1,262 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Varietal turnover: Fit risk or behavioral learning
+\end_layout
+
+\begin_layout Section
+Interventions
+\end_layout
+
+\begin_layout Subsection
+Fit risk
+\end_layout
+
+\begin_layout Standard
+Fit risk is an important constraint to improved seed adoption and varietal
+ turnover in many low and middle income countries.
+ Fit risk emerges if a farmer is not unsure if a particularly new technology
+ is suitable to their specific characteristics (eg will it grow on my land,
+ will I like the taste of it).
+ Fit risk is inherently idiosyncratic in nature.
+ As such, little can be learned from social networks and experimenting on
+ own plots is necessary.
+ 
+\end_layout
+
+\begin_layout Standard
+One way to encourage farmers to experiment with new inputs is to provide
+ trial packs.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "van2018performance"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Secondary contributions: most studies look at experimental trials at research
+ stations.
+ Even in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "van2018performance"
+literal "false"
+
+\end_inset
+
+, the trails were research-managed farm trials set up on demonstration plots.
+ This study will distribute trial packs to randomly sampled farmers and
+ provide them with a simple protocol to run mini trials on their own fields.
+\end_layout
+
+\begin_layout Subsection
+Behavioural learning - negativity bias
+\end_layout
+
+\begin_layout Standard
+Farmers not only learn from experimentation, they also learn from peers.
+ However, social learning is fraught with biases that may slow down varietal
+ turnover and/or adoption.
+ Using data from the previous experiment, we design an intervention that
+ uses the yield data from the on farm trails to look at effects of how informati
+on is presented.
+ One of the reasons why fake news exists maybe that extremely negative experienc
+es get a much higher weight when people learn 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "soroka2019cross,trussler2014consumer"
+literal "false"
+
+\end_inset
+
+.
+ Negativity bias is linked to loss aversion, a cognitive bias that describes
+ why the pain of losing is psychologically more than twice as powerful as
+ the pleasure of gaining.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "rozin2001negativity"
+literal "false"
+
+\end_inset
+
+ suggested that adverse events seem to be dominant as negative entities
+ are more contagious than positive entities..
+\end_layout
+
+\begin_layout Standard
+alternative explanations for negativity bias: (https://www.bbc.com/future/article/
+20140728-why-is-all-the-news-bad)
+\end_layout
+
+\begin_layout Itemize
+danger reaction; be ready for threats so pay attention to the worst news.
+ 
+\end_layout
+
+\begin_layout Itemize
+we see the world rosier than it is, so negative things stand out more or
+ become more salient
+\end_layout
+
+\begin_layout Section
+Power calculations
+\end_layout
+
+\begin_layout Section
+Planing
+\end_layout
+
+\begin_layout Standard
+There are two maize growing seasons in the area we are planning to work.
+ One is running from march/april to june/July, the other from August/Sept
+ to November/December.
+\end_layout
+
+\begin_layout Standard
+Ideally we would distribute trail packs together with baseline data collection
+ about one month before planting.
+ As such, the best time would be around February 2023.
+\end_layout
+
+\begin_layout Subsection*
+Risks
+\end_layout
+
+\begin_layout Standard
+What seed should we propose? Should we focus on seed turnover? In that case,
+ the relevant comparison would be eg Longe 6 to Longe 5.
+ Problems with that is that we will need pretty stringent selection criteria
+ (eg farmers need to plan to grow Longe 5 to which they will then compare
+ the next generation seed eg Longe 6).
+ There are also many risks related to this.
+ First, will we have access to Longe 6 to distribute in small packages to
+ farmers? But more importantly, in the next season, where we want to measure
+ the impact of reducing fit risk via trial packs on future adoption, the
+ new seed (Longe 6) needs to be on the market.
+ Alternatively, we could focus on adoption more generally, in case we would
+ like farmers to compare farmer saved seed to the improved seed variety
+ we supply in the form of a trial package.
+ In this case, we can decide to select a variety we are certain that is
+ widely available such that the supply constrained is not binding when we
+ want to assess the impact of experimentation on subsequent adoption.
+\end_layout
+
+\begin_layout Standard
+Farmers that received trial packs and farmers may lead to problems when
+ control farmers do not get this, or when during follow-up interventions
+ that do not involve trial packs are organized.
+ Probably we will need to implement the intervention at the village level
+ and match treatment and control villages.
+ In one village, we could select 10 households to get the trial packs and
+ these will then be compared to 10 households in a control village (close
+ to the treatment village).
+ In the next stage, results from the treatment village can be used 
+\end_layout
+
+\begin_layout Subsection*
+Questions
+\end_layout
+
+\begin_layout Standard
+Timing: can we use money for fieldwork that was reserved for 2022 in 2023?
+ Because as it looks, we will do the baseline only in 2023.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "MIPPI_PAP"
+options "IFPRI_Style"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
