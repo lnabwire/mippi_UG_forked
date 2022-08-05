@@ -78,11 +78,212 @@
 \begin_body
 
 \begin_layout Title
-Varietal turnover: Fit risk or behavioral learning
+Subsidizing agricultural inputs to increase adoption and varietal turnover:
+ a two stage pricing design
+\end_layout
+
+\begin_layout Abstract
+If a product is obtained for free, farmers may be less likely to put in
+ the additional effort that is needed for 
 \end_layout
 
 \begin_layout Section
-Interventions
+Context
+\end_layout
+
+\begin_layout Standard
+To introduce new agricultural technologies, some level of subsidy is often
+ used.
+ Private sector often use trail packs, as they realize farmers may be reluctant
+ to try out a new product.
+ Public actors may think commercial seed are out of reach of poor households
+ and want to kick start adoption by providing the initial investment.
+ The case for free (or subsidies) inputs also stems from potential externalities.
+ For example, it is well established that one of the most effective ways
+ to increase technology adoption is through peer learning, and both private
+ and public partners may attempt to leverage social learning.
+ Furthermore, informal seed systems used by farmers often suffer from decades
+ of seed degeneration due to recycling of seed introduced during colonial
+ times.
+ Injecting new seed varieties (that can be recycled to some extent) can
+ be an important strategy to improve the overall seed stock in the informal
+ sector.
+ For instance, public research organizations often invest in open pollinating
+ varieties (OPVs) that can be recycled to some extent without losing yield
+ potential.
+\end_layout
+
+\begin_layout Standard
+It is often argued that providing something for free leads people to attribute
+ less value to it.
+ As a result, the good or service remains unused, is resold, or used in
+ unintended ways.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HOFFMANN2009607"
+literal "false"
+
+\end_inset
+
+ argue that poor people that receive goods for free are subject to an endowment
+ effect, which reduces their propensity to resell it.
+\end_layout
+
+\end_inset
+
+ Examples include the use of free bednets for fishing or the use of subsidized
+ chlorine for cleaning (instead of water purification).
+ Charging a price is assumed to increase use through three mechanisms.
+ The first is a screening effect, whereby only people who really value the
+ product will acquire the product, while does who do not intent to use it
+ do not.
+ A second is more psychological in nature and conjectures that people are
+ prone to sunk cost effects.
+ As a result, paying a positive price for it also leads one to appreciate
+ it more.
+ Finally, prices may also provide a signal for quality.
+\end_layout
+
+\begin_layout Standard
+The intended use of free seed trial packs is to experiment and learn, which
+ is expected to result in increased adoption in the future.
+ This implies various intermediate outcomes on the impact pathway.
+ For instance, in a first step, farmers are assumed to use the seed from
+ the seed pack for intended use (as opposed to selling it or even eating
+ it).
+ 
+\end_layout
+
+\begin_layout Standard
+Q1: is learning lower if seed is provided for free versus if farmers need
+ to pay for it.
+\end_layout
+
+\begin_layout Standard
+Q2: if Q1 is Yes, is the reduction in learning due to 1) a screening effect
+ or 2) 
+\end_layout
+
+\begin_layout Standard
+Policy relevance: the existence of a substantial sunk cost effect would
+ mean that providing seed for free is not an effective strategy.
+\end_layout
+
+\begin_layout Standard
+While cost sharing may increase effectiveness, it reduces demand.
+ This could be an issue when those that are likely to select out are also
+ the ones that you are targetting: the benefits of learning may be higher
+ for those that are more cash or credit constrained.
+\end_layout
+
+\begin_layout Standard
+The elasticity of adoption with respect to price.
+\end_layout
+
+\begin_layout Standard
+The relationship between prices and subsequent adoption during follow up
+ in the next season is a combination of the selection and sunk cost effects.
+ We use a randomized two-stage pricing design to isolate the sunk-cost effect
+ from the overall effect.
+ In areas where we charged a price for trial seed bags (through a BDM),
+ we applied a random discount.
+ As a result, the actual paid price varied from zero (100 percent discount)
+ to the posted price (0 percent discount).
+\end_layout
+
+\begin_layout Standard
+We also include a control group to compare outcomes and characteristics
+ in the average farmer population.
+ This is useful to investigate selection effects of pricing trial packs.
+ Such and analysis is useful for setting the subsidy level, as the public
+ planner may want to make sure the subsidy is high enough to enable credit
+ constraint farmers to buy the seed, but low enough to discourage farmers
+ who do not need the seed to obtain it.
+ We could for instance test if farmers who select into seed by paying a
+ positive price for it are also those farmers that are using poor quality
+ seed (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1162/qjec.2010.125.1.1"
+literal "false"
+
+\end_inset
+
+ page 34-35).
+ 
+\end_layout
+
+\begin_layout Standard
+One of the cool things about the experiment is also that you can do some
+ simple cost-effectiveness estimates with some simple assumptions,
+\end_layout
+
+\begin_layout Standard
+Potential problem: we need to make sure enough farmers buy in the BDM, to
+ make sure we have enough power in the second stage.
+\end_layout
+
+\begin_layout Standard
+Also include: charging a price versus not is also related to sustainability.
+ Discuss that private sector may have different intentions with subsidized
+ trial packs than eg government, so the former may be more interested in
+ one-off discounts, while the latter may be looking more at longer run agro-inpu
+t support programs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.99.2.236"
+literal "false"
+
+\end_inset
+
+ further explores how charging for health products versus subsidizing affects
+ distribution of benefits within the household.
+ Using the case of insecticide treated bed-nets as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1162/qjec.2010.125.1.1"
+literal "false"
+
+\end_inset
+
+, they argue that there may be different reasons why free bednets may be
+ used more for protecting children than bednets that need to be paid for.
+ they conclude that these findings may have implications for the design
+ of programs targeting particular groups at the sub-household level.
+ In line with this, we may want to investigate how free pack vs payed seed
+ affect decision making within households.
+ That is, if the (male) decision maker gets seed for free, does he allow
+ more participation from the wife than if he made the decision to buy it?
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.99.2.236"
+literal "false"
+
+\end_inset
+
+ also study an endowment effect, where those who get something for free
+ become richer and so are less likely to re-sell.
+ Can we remove this endowment effect by offering households that need to
+ pay for seed a sum of money that is equal to the cost of the seed?
+\end_layout
+
+\begin_layout Standard
+Note: Large scale free seed supply may affect seed market performance if
+ it reduces the likelihood that farmers buy.
+ In the long run, this may reduce investment in the sector and as a result
+ reduce seed turnover.
+ This will especially be the case if farmers resell seed they get for free
+ or at a subsidized price.
 \end_layout
 
 \begin_layout Subsection
@@ -129,6 +330,7 @@ literal "false"
 , the trails were research-managed farm trials set up on demonstration plots.
  This study will distribute trial packs to randomly sampled farmers and
  provide them with a simple protocol to run mini trials on their own fields.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -180,6 +382,23 @@ danger reaction; be ready for threats so pay attention to the worst news.
 \begin_layout Itemize
 we see the world rosier than it is, so negative things stand out more or
  become more salient
+\end_layout
+
+\begin_layout Itemize
+incorrect mental models may mean farmers pay attention to the wrong attributes
+\end_layout
+
+\begin_layout Itemize
+sunk cost effects - should seed have a price? Here is the narrative: if
+ you give seeds for free, farmers will not value them.
+ This may also affect learning: if farmers do not have to sink a substantive
+ cost for the seed, they will also put less effort in learning from it.
+ This is called the sunk cost effect, and it is often used as an argument
+ against AIPs.
+ An alternative explanation is that farmers that pay for seed are actually
+ a different subset, as higher prices skew the composition of buyers towards
+ farmers with a real interest in seed and so ready for learn from it.
+ A
 \end_layout
 
 \begin_layout Section
