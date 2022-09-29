@@ -116,16 +116,17 @@ To increase adoption of new agricultural technologies, some level of initial
  subsidy is often offered.
  For instance, companies may offer free trial packs of new improved seed
  varieties; governments may offer subsidies to increase varietal turnover.
- It is often argued that if something was obtained for free, it may be used
- differently than when something has a price.
- In this paper, we test the hypothesis that farmers learn mess from seed
- that was obtained for free than if they had to pay a price for it.
- We focus on the selection effect, whereby farmers that are prepared to
- pay a price may be inherently more motivated to learn from it for subsequent
- adoption decisions, and the sunk cost effect, where something that has
- a price is also valued more.
- We do this using a two stage pricing design.
- 
+ However, it is also often argued that if something was obtained for free,
+ it may be used differently than when something has a price.
+ In this paper, we test if farmers that receive a trial pack for free are
+ more likely to adopt it in the future.
+ Furthermore we test whether farmers learn less from seed that was obtained
+ for free than if they had to pay a (small) price for it.
+ The latter hypothesis is tested using do this using a two stage pricing
+ design, such that we can disentangle the selection effect, whereby farmers
+ that are prepared to pay a price may be inherently more motivated to learn
+ from it for subsequent adoption decisions, and the sunk cost effect, where
+ something that has a price is also valued more.
 \end_layout
 
 \begin_layout Section
@@ -295,6 +296,45 @@ literal "false"
 \end_layout
 
 \begin_layout Section
+Experimental design and contrasts
+\end_layout
+
+\begin_layout Standard
+We will use a parallel design consisting of four treatment arms (including
+ one pure control).
+ This allows us to test the following hypothesis:
+\end_layout
+
+\begin_layout Itemize
+comparing the control to the free seed effect estimates the average treatment
+ effect of trial packs to encourage subsequent adoption.
+ This gives the overall effect of exposure to seed.
+\end_layout
+
+\begin_layout Itemize
+comparing the free seed to the paid seed gives the screening effect: this
+ gives an estimate of the part of the overall effect that is due to fact
+ that some farmers would have bought the seed anyway
+\end_layout
+
+\begin_layout Itemize
+comparing the paid seed to the discounted seed effect gives the sunk cost
+ effect: this gives an estimate of the part of the overall effect that is
+ due to the fact that you are getting something that is worth.
+ We expect this effect to be negative if people are prone to this effect
+\end_layout
+
+\begin_layout Section
+Treatments
+\end_layout
+
+\begin_layout Standard
+Subjects allocated to treatment arms 3 and 4 will start out with a baseline
+ survey and give the opportunity to buy seed as part of a BDM.
+ 
+\end_layout
+
+\begin_layout Section
 Policy relevance 
 \end_layout
 
@@ -403,6 +443,124 @@ literal "false"
 
 \begin_layout Section
 Power calculations
+\end_layout
+
+\begin_layout Standard
+We use simulations to determine sample size.
+ Simulation is a far more flexible, and far more intuitive way to think
+ about power analysis.
+ Even the smallest tweaks to an experimental design are difficult to capture
+ in a formula (adding a second treatment group, for example), but are relatively
+ straightforward to include in a simulation.
+ In our case, we generate data with a simulated treatment effect of a given
+ size 
+\emph on
+n
+\emph default
+ times (for the number of simulations), and then count how often (
+\emph on
+z
+\emph default
+) we can find a significant effect (p<0.05).
+ We do this for different sample sizes (eg 100, 200, 300, ...
+ 1000) and pick the sample size where 
+\emph on
+z/n
+\emph default
+ is about .80.
+ As we have a clustered design, we perform a grid search over 2 dimensions:
+ number of villages and number of households per village.
+ 
+\end_layout
+
+\begin_layout Standard
+We use the following assumptions for the power calculations.
+ Te primary outcome we use is a binary indicator for use of improved seed
+ at the farmer level.
+ Using data previously collected as part of a different project from 3450
+ smallholder maize farmers located in 345 villages, we find that about 64
+ percent of farmers indicate that they are already using improved seed.
+ Inter cluster correlation has been estimated to be 0.15.
+ 
+\end_layout
+
+\begin_layout Standard
+We start by running a power calculation to test they hypothesis if trail
+ packs work: that is, do households in villages that received the trial
+ pack for free are significantly more likely to adopt improved seed varieties
+ in the next season? In our power calculations, we assume a treatment effect
+ of 15 percentage points.
+ Results are presented in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:power-plane"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ With fairly high levels of intra-cluster correlation, increasing the number
+ of villages leads to larger power gains than increasing the number of farmers
+ within villages.
+ A cost effective sample that attains .80 power is 60 villages (30 of which
+ are treated) and randomly sample 15 households within each village.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename power_pic.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+power plane
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:power-plane"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As we will assume the different treatments have different effect size, and
+ we are mainly interested in particular comparisons between treatment groups
+ (ctrl-T1), (T1-T2) and (T2-T3), it may be that different numbers of observation
+s are needed for different treatment groups.
+ To determine sample size in other groups, we will thus run separate simulations.
+ However, we will keep the number of villagers per cluster constant to the
+ number determined in the previous step.
 \end_layout
 
 \begin_layout Section
