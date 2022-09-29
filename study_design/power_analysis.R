@@ -76,7 +76,7 @@ for (j in 1:length(N_villages)){
   # store average success rate (power) for each N
 }
 
-fig <- plot_ly(x=~N_villages,y=~n_farmers_per_village,z = ~power)
+fig <- plot_ly(x=~n_farmers_per_village,y=~N_villages,z = ~power)
 
 fig <- fig %>% add_surface(
   
