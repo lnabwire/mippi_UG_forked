@@ -107,8 +107,8 @@ thanks{Markets Trade and Institutions Division, International Food Policy
 
 \end_inset
 
-Subsidizing Agricultural Inputs to Increase Adoption and Varietal Turnover—A
- Pre-Analysis Plan
+Increasing Adoption and Varietal Turnover of Seed—A Pre-Analysis Plan for
+ Consumer and Producer Side Interventions
 \end_layout
 
 \begin_layout Abstract
@@ -117,16 +117,26 @@ To increase adoption of new agricultural technologies, some level of initial
  For instance, companies may offer free trial packs of new improved seed
  varieties; governments may offer subsidies to increase varietal turnover.
  However, it is also often argued that if something was obtained for free,
- it may be used differently than when something has a price.
- In this paper, we test if farmers that receive a trial pack for free are
- more likely to adopt it in the future.
- Furthermore we test whether farmers learn less from seed that was obtained
- for free than if they had to pay a (small) price for it.
- The latter hypothesis is tested using do this using a two stage pricing
- design, such that we can disentangle the selection effect, whereby farmers
- that are prepared to pay a price may be inherently more motivated to learn
- from it for subsequent adoption decisions, and the sunk cost effect, where
- something that has a price is also valued more.
+ it may be used differently than when something has a price attached to
+ it.
+ In this paper, we first test the effectiveness of free trial packs by testing
+ if farmers that receive a sample of a new improved seed variety are more
+ likely to adopt it in the future that a control group of farmers who did
+ not get a sample.
+ Furthermore we test whether farmers learn differently from seed that was
+ obtained for free than if they had to pay a (small) price for it.
+ This questions is investigated using BDM auction—essentially a two stage
+ pricing design—such that we can disentangle the selection effect, whereby
+ farmers that are prepared to pay a price are likely to be more motivated
+ to learn from it for subsequent adoption decisions, and the sunk cost effect,
+ where a product that has a price attached to it is valued more.
+ In addition to interventions that function as a push factor on the production
+ side, consumer demand may also be an important pull factor for adoption
+ of new or improved varieties.
+ Using a factorial design, we thus also include a consumer side intervention
+ that focuses on demonstrating the ease of cocking, which was found to be
+ a desirable characteristic that is often overlooked.
+ 
 \end_layout
 
 \begin_layout Section
@@ -146,7 +156,7 @@ To introduce new agricultural technologies, some level of subsidy is often
  and public partners may attempt to leverage social learning 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "10.1257/aer.100.1.35"
+key "10.1257/aer.100.1.35,https://doi.org/10.1111/j.1468-0297.2006.01115.x"
 literal "false"
 
 \end_inset
@@ -154,10 +164,17 @@ literal "false"
 .
  Furthermore, informal seed systems used by farmers often suffer from decades
  of seed degeneration due to recycling of seed introduced during colonial
- times.
- Injecting new seed varieties (that can be recycled to some extent) can
- be an important strategy to improve the overall seed stock in the informal
- sector.
+ times 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "mcguire2016seed"
+literal "false"
+
+\end_inset
+
+.
+ Injecting new seed varieties can be an important strategy to improve the
+ overall seed stock in the informal sector.
  For instance, public research organizations often invest in open pollinating
  varieties (OPVs) that can be recycled to some extent without losing yield
  potential.
@@ -168,25 +185,8 @@ At the same time, it is often argued that providing goods or services for
  free distorts the utility people attach to it.
  As a result, the good or service remains unused, is resold, or used in
  unintended ways.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand citet
-key "HOFFMANN2009607"
-literal "false"
-
-\end_inset
-
- argue that poor people that receive goods for free are subject to an endowment
- effect, which reduces their propensity to resell it.
-\end_layout
-
-\end_inset
-
  Examples include the use of free bednets for fishing or the use of subsidized
- chlorine for cleaning (instead of water purification) 
+ chlorine for cleaning (instead of drinking water treatment) 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1162/qjec.2010.125.1.1,10.1257/aer.100.5.2383"
@@ -239,9 +239,87 @@ literal "false"
  learn.
  That is, if a seed is valued less because it is provided for free, it may
  also be that farmers put in less effort and complementary investment when
- experimenting, and pay less attiontion to outcomes.
+ experimenting, and pay less attention to outcomes.
  Examples include sowing free seed on sub-optimal plots or mixing the free
  seed with farmer saved seed, which would make it hard to learn.
+\end_layout
+
+\begin_layout Standard
+Supply chain upgrading is generally instigated by both push factors (such
+ as the introduction of new varieties or production techniques that increase
+ productivity) and pull factors (such as increased demand through opening
+ up of an export market).
+ In seed supply chains, demand for a new seed in terms of consumption is
+ often overlooked.
+ Previous exploratory data analysis suggests that ease of cooking is a character
+istic on the consumer side that is deemed important in a range of context
+ and for different crops.
+ 
+\end_layout
+
+\begin_layout Section
+Relation to the literature
+\end_layout
+
+\begin_layout Standard
+Most studies look at experimental trials at research stations.
+ Even in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "van2018performance"
+literal "false"
+
+\end_inset
+
+, the trails were research-managed farm trials set up on demonstration plots.
+ More importantly, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "van2018performance"
+literal "false"
+
+\end_inset
+
+ only look at intention to adopt in the future, while we will consider actual
+ adoption in the next season.
+\end_layout
+
+\begin_layout Standard
+The use of BDM to isolate screening and sunk cost effects has not been done
+ that often.
+ As far as we know, it was only done by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1086/705374"
+literal "false"
+
+\end_inset
+
+ but there it ended up on the online appendix.
+ However, a BDM may be a better way.
+ Indeed, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.100.5.2383"
+literal "false"
+
+\end_inset
+
+ argue that their procedure correlates to WTP.
+ But a BDM directly measures WTP.
+\end_layout
+
+\begin_layout Standard
+BDM seems to work pretty well in practice 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "BURCHARDI2021102701"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
@@ -249,10 +327,22 @@ Method
 \end_layout
 
 \begin_layout Standard
-The relationship between prices and subsequent adoption during follow-up
- in the next season is a combination of the selection and sunk cost effects.
- We use a randomized two-stage pricing design to isolate the sunk-cost effect
- from the overall effect 
+We use a standard field experiment to test the effectiveness of free trial
+ packs and the consumer side interventions.
+ In particular, using a 2x2 cluster randomized control trial we test if
+ farmers that receive a sample of a new improved seed variety are more likely
+ to adopt it in the future than a control group of farmers who did not get
+ a sample, and if farmers that are exposed to a consumer side intervention
+ are are more likely to adopt it in the future than a control group of farmers
+ who were not exposed to this intervention.
+ 
+\end_layout
+
+\begin_layout Standard
+To test whether farmers learn differently from seed that was obtained for
+ free than if they had to pay a (small) price for it, we use a randomized
+ two-stage pricing design to isolate the sunk-cost effect from the overall
+ effect 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1257/aer.100.5.2383,10.1162/qjec.2010.125.1.1"
@@ -261,38 +351,44 @@ literal "false"
 \end_inset
 
 .
- In areas where we charge a price for trial seed bags (through a BDM), we
- apply a random discount.
- As a result, the actual paid price varied from zero (100 percent discount)
- to the posted price (0 percent discount).
- The sunk cost effect can than be estimated by estimating the relationship
- between the outcome of interest and the discount, conditional on price
- paid.
- The screening effect can be estimated by estimating the relationship between
- the outcome of interest and the price paid, while controlling for the discount
- received.
+ In such designs, subjects are offered a service or good for a particular
+ price (or prices) in a first stage.
+ In a second stage, a discount is applied to that price.
+ Regressing product use on the price while controlling for the discount
+ gives an estimate of the screening effect of the price, while regressing
+ product use on the discount while controlling for the price gives an estimate
+ of the sunk cost effect.
 \end_layout
 
 \begin_layout Standard
-We also include a control group (that does not receive a trial pack) to
- compare outcomes and characteristics in the average farmer population.
- This is useful to investigate selection effects of pricing trial packs,
- which in turn is useful for setting the subsidy level, as the public planner
- may want to make sure the subsidy is high enough to enable credit constraint
- farmers to buy the seed, but low enough to discourage farmers who do not
- need the seed to obtain it.
- We could for instance test if farmers who select into seed by paying a
- positive price for it are also those farmers that are using poor quality
- seed (see 
+A standard Becker-Degroot-Marschak auction can be used to disentangle the
+ sunk cost and screening effect 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "10.1162/qjec.2010.125.1.1"
+LatexCommand citep
+key "https://doi.org/10.1002/bs.3830090304"
 literal "false"
 
 \end_inset
 
- page 34-35).
- 
+.
+ In such an auction, farmers are asked to name the highest price they are
+ prepared to pay for a particular good.
+ Participants then enter a lottery where a price is drawn from a particular
+ distribution.
+ If the price the farmer was prepared to pay is higher than the price drawn,
+ the farmer gets the item at the draw price.
+ The difference between the farmer's reservation price and the price drawn
+ is then an unexpected discount, and so the BDM provides us with the two
+ components necessary to disentangle the screening and sunk cost effects:
+ the willingness-to-pay and the transaction price 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "doi:10.1086/705374"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -300,38 +396,37 @@ Experimental design and contrasts
 \end_layout
 
 \begin_layout Standard
-We will use a parallel design consisting of four treatment arms (including
- one pure control).
- This allows us to test the following hypothesis:
+The cluster randomize control trial will take the form of a 2x2 factorial
+ design.
+ Each factor has a control and a treatment level.
+ For the first factor, the treatment level consists of receiving a free
+ trial pack of seed.
+ For the second factor, the treatment level still needs to be specified.
+ The clusters will be villages, in which a fixed number of households will
+ be selected.
 \end_layout
 
-\begin_layout Itemize
-comparing the control to the free seed effect estimates the average treatment
- effect of trial packs to encourage subsequent adoption.
- This gives the overall effect of exposure to seed.
-\end_layout
-
-\begin_layout Itemize
-comparing the free seed to the paid seed gives the screening effect: this
- gives an estimate of the part of the overall effect that is due to fact
- that some farmers would have bought the seed anyway
-\end_layout
-
-\begin_layout Itemize
-comparing the paid seed to the discounted seed effect gives the sunk cost
- effect: this gives an estimate of the part of the overall effect that is
- due to the fact that you are getting something that is worth.
- We expect this effect to be negative if people are prone to this effect
+\begin_layout Standard
+To study screening and sunk cost effects, we confine ourselves to the treatment
+ factor of the seed trial intervention (that is, half of the sample that
+ is used to power the 2x2 factorial design).
+ In this subset, we match to each treated household a household that will
+ be offered seed at a non-zero transaction cost.
+ While all households in the treatment factor of the seed pack intervention
+ will be subjected to a BDM, we will make sure that half of these individuals
+ will receive a 100 percent discount (that is, make sure that the price
+ the computer draws is zero).
+ In reality, we will also have to take into account that some farmers may
+ be naming a reservation price that is likely to be below the price drawn
+ by the lottery.
+ This problem can be controlled by making sure the computer always draws
+ a price that is below the farmer reservation price.
+ At the same time, if farmers get the opportunity to learn this, they are
+ likely to underbid.
 \end_layout
 
 \begin_layout Section
 Treatments
-\end_layout
-
-\begin_layout Standard
-Subjects allocated to treatment arms 3 and 4 will start out with a baseline
- survey and give the opportunity to buy seed as part of a BDM.
- 
 \end_layout
 
 \begin_layout Section
@@ -399,48 +494,6 @@ literal "false"
  more participation from the wife than if he made the decision to buy it?
 \end_layout
 
-\begin_layout Standard
-Just comparing no trial packs to free trial packs may be a very good 
-\begin_inset Quotes eld
-\end_inset
-
-common intervention
-\begin_inset Quotes erd
-\end_inset
-
-, as one way to encourage farmers to experiment with new inputs is to provide
- trial packs.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "van2018performance"
-literal "false"
-
-\end_inset
-
-.
- Most studies look at experimental trials at research stations.
- Even in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "van2018performance"
-literal "false"
-
-\end_inset
-
-, the trails were research-managed farm trials set up on demonstration plots.
- More importantly, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "van2018performance"
-literal "false"
-
-\end_inset
-
- only look at intention to adopt in the future, while we will consider actual
- adoption in the next season.
-\end_layout
-
 \begin_layout Section
 Power calculations
 \end_layout
@@ -475,25 +528,66 @@ z/n
 
 \begin_layout Standard
 We use the following assumptions for the power calculations.
- Te primary outcome we use is a binary indicator for use of improved seed
+ The primary outcome we use is a binary indicator for use of improved seed
  at the farmer level.
  Using data previously collected as part of a different project from 3450
  smallholder maize farmers located in 345 villages, we find that about 64
  percent of farmers indicate that they are already using improved seed.
- Inter cluster correlation has been estimated to be 0.15.
+ However, this is likely to be an overestimate as these farmers were sample
+ from clients of agro-input dealers, and the question asked was if the farmer
+ had ever used improved seed.
+ We thus use a baseline seed use rate of 32 percent, which is closer to
+ mean of 34 percent reported in the same area in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "https://doi.org/10.1002/ajae.12089"
+literal "false"
+
+\end_inset
+
+.
+ Inter cluster(within village) correlation for this outcome has been estimated
+ to be 0.15.
+ We assume similar treatment effects for both the seed trail treatment and
+ the consumption (a 13.5 percentage point increase).
+ For the interaction effect, we assume a 23.5 percentage point increase.
+ We use HC3 standard errors clustered at the village level for the power
+ calculations.
+ R code can be found 
+\begin_inset CommandInset href
+LatexCommand href
+name "here"
+target "https://github.com/bjvca/mippi_UG/blob/master/study_design/power_analysis.R"
+literal "false"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-We start by running a power calculation to test they hypothesis if trail
- packs work: that is, do households in villages that received the trial
- pack for free are significantly more likely to adopt improved seed varieties
- in the next season? In our power calculations, we assume a treatment effect
- of 15 percentage points.
- Results are presented in Figure 
+After running a series of power simulation where we optimize power for samples
+ that vary over 2 dimensions (villages and households per village), we converged
+ to a sample consisting of 110 villages with 20 households in each village.
+ In this design, 55 villages or 1,100 households will receive a free trial
+ pack and 55 villages or 1,100 households will be exposed to the consumption
+ side treatment.
+ Half of these will overlap, that is, about 27 villages or 540 households
+ will receive both treatments.
+ With this setting, we are not powered to detect the three effects simultaneousl
+y.
+ In only 66 percent of cases we are able to estimate a positive effect at
+ the five percent significance level for both treatments and their interaction.
+ However, if we consider the treatments separately, we hit conventional
+ power levels for both treatments, and get up to 0.97 for the interaction
+ effect.
+ We are certain to identify at least one of the three parameters of interest
+ (seed packs, consumer intervention, or the interaction).
+ The design, with sample sizes, is illustrated in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:power-plane"
+reference "fig:Design"
 plural "false"
 caps "false"
 noprefix "false"
@@ -501,11 +595,16 @@ noprefix "false"
 \end_inset
 
 .
- With fairly high levels of intra-cluster correlation, increasing the number
- of villages leads to larger power gains than increasing the number of farmers
- within villages.
- A cost effective sample that attains .80 power is 60 villages (30 of which
- are treated) and randomly sample 15 households within each village.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Design"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -517,8 +616,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename power_pic.png
-	scale 40
+	filename design_pic.png
+	scale 25
 
 \end_inset
 
@@ -529,10 +628,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-power plane
+Design
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:power-plane"
+name "fig:Design"
 
 \end_inset
 
@@ -554,13 +653,10 @@ name "fig:power-plane"
 \end_layout
 
 \begin_layout Standard
-As we will assume the different treatments have different effect size, and
- we are mainly interested in particular comparisons between treatment groups
- (ctrl-T1), (T1-T2) and (T2-T3), it may be that different numbers of observation
-s are needed for different treatment groups.
- To determine sample size in other groups, we will thus run separate simulations.
- However, we will keep the number of villagers per cluster constant to the
- number determined in the previous step.
+We will not run formal power calculations for the BDM based experiment (but
+ we will once the final sample is known calculate minimal detectable effect
+ sizes for reference).
+ As mentioned above, we will just add an extra column to the 2x2 design
 \end_layout
 
 \begin_layout Section
