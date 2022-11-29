@@ -97,7 +97,14 @@ thanks{Development Strategy and Governance Division, International Food
  Policy Research Institute, Kampala, Uganda}, Berber Kramer
 \backslash
 thanks{Markets Trade and Institutions Division, International Food Policy
- Research Institute, Nairobi, Kenya}}
+ Research Institute, Nairobi, Kenya}, 
+\backslash
+
+\backslash
+ Carly Trachtman
+\backslash
+thanks{Markets Trade and Institutions Division, International Food Policy
+ Research Institute, Washington DC, USA}}
 \end_layout
 
 \end_inset
@@ -656,11 +663,11 @@ name "fig:Design"
 We will not run formal power calculations for the BDM based experiment (but
  we will once the final sample is known calculate minimal detectable effect
  sizes for reference).
- As mentioned above, we will just add an extra column to the 2x2 design
+ As mentioned above, we will just add an extra column to the 2x2 design.
 \end_layout
 
 \begin_layout Section
-Planing
+Timeline
 \end_layout
 
 \begin_layout Standard
@@ -675,7 +682,159 @@ Ideally we would distribute trail packs together with baseline data collection
  As such, the best time would be around February 2023.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename timeline.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Timeline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Outcomes
+\end_layout
+
+\begin_layout Standard
+We differentiate between outcomes at mideline and outcomes at endline.
+ At midline, we are primarily interested in the use of the trial seed pack,
+ at endline we focus on adoption in subsequent years.
+ 
+\end_layout
+
+\begin_layout Subsection
+Outcomes at midline
+\end_layout
+
+\begin_layout Itemize
+was trial pack used? Details on how the package was used.
+ Was was it mixed with landraces, or was it planted on a particular plot?
+ Was it intercroped? Detailed questions about the use of complementary inputs
+ such as labour, fertilizer, chemicals.
+ Detailed questions about management practices (time of planting, seed rate
+ and spacing, weeding,...)
+\end_layout
+
+\begin_layout Itemize
+yields from trial pack
+\end_layout
+
+\begin_layout Itemize
+yields from normal field
+\end_layout
+
+\begin_layout Itemize
+perceptions related to the quality of the seed
+\end_layout
+
+\begin_layout Itemize
+questions on intentions for next season.
+\end_layout
+
+\begin_layout Subsection
+Outcomes at endline
+\end_layout
+
+\begin_layout Subsection
+Primary outcomes
+\end_layout
+
+\begin_layout Standard
+The main aim of the project is to find ways to increase varietal turnover.
+ Most primary outcomes are therefore related to seed use in years subsequent
+ to the intervention.
+\end_layout
+
+\begin_layout Itemize
+Details on how the seed that was used.
+ Was it the same seed as the one used in the treatment or was it another
+ improved variety (which would also serve the purpose)? Was it bought or
+ was it recycled from the seed that was given? Varietal age.
+\end_layout
+
+\begin_layout Itemize
+Was was it mixed with landraces, or was it planted on a particular plot?
+ Was it intercroped? 
+\end_layout
+
+\begin_layout Itemize
+Detailed questions about the use of complementary inputs such as labour,
+ fertilizer, chemicals.
+ Detailed questions about management practices (time of planting, seed rate
+ and spacing, weeding,...)
+\end_layout
+
+\begin_layout Itemize
+how was the seed obtained
+\end_layout
+
+\begin_layout Itemize
+seed replacement rate
+\end_layout
+
+\begin_layout Itemize
+perceptions related to the quality of the seed
+\end_layout
+
+\begin_layout Subsection
+Secondary outcome
+\end_layout
+
+\begin_layout Itemize
+other key technologies that are crowded in (like fertilizer use, chemicals,
+ labor,...)
+\end_layout
+
+\begin_layout Itemize
+production
+\end_layout
+
+\begin_layout Itemize
+area planted
+\end_layout
+
+\begin_layout Itemize
+inter-cropping
+\end_layout
+
+\begin_layout Itemize
+market participation
+\end_layout
+
+\begin_layout Itemize
+consumption of improved variety
+\end_layout
+
+\begin_layout Section
 Questions
 \end_layout
 
