@@ -119,17 +119,18 @@ Increasing Adoption and Varietal Turnover of Seed—A Pre-Analysis Plan for
 \end_layout
 
 \begin_layout Abstract
-To increase adoption of new agricultural technologies, some level of initial
- subsidy is often offered.
+To increase adoption of new agricultural technologies, both push (supply
+ side) and pull (demand side) factors are important.
+ As a push factor to increase adoption of a particular technology such as
+ an improved seed variety, some level of initial subsidy is often offered.
  For instance, companies may offer free trial packs of new improved seed
  varieties; governments may offer subsidies to increase varietal turnover.
- However, it is also often argued that if something was obtained for free,
- it may be used differently than when something has a price attached to
- it.
+ However, it is also often argued that if something was subsidized (or even
+ free), it may not be used for the intended purpose.
  In this paper, we first test the effectiveness of free trial packs by testing
  if farmers that receive a sample of a new improved seed variety are more
- likely to adopt it in the future that a control group of farmers who did
- not get a sample.
+ likely to adopt it in the future than a control group of farmers who did
+ not get a free sample.
  Furthermore we test whether farmers learn differently from seed that was
  obtained for free than if they had to pay a (small) price for it.
  This questions is investigated using BDM auction—essentially a two stage
@@ -137,13 +138,20 @@ To increase adoption of new agricultural technologies, some level of initial
  farmers that are prepared to pay a price are likely to be more motivated
  to learn from it for subsequent adoption decisions, and the sunk cost effect,
  where a product that has a price attached to it is valued more.
- In addition to interventions that function as a push factor on the production
- side, consumer demand may also be an important pull factor for adoption
- of new or improved varieties.
- Using a factorial design, we thus also include a consumer side intervention
- that focuses on demonstrating the ease of cocking, which was found to be
- a desirable characteristic that is often overlooked.
- 
+ In addition to the supply side intervention, we also test the relative
+ effectiveness of a demand sided intervention for adoption of new or improved
+ varieties—an area often overlooked in existing research.
+ In particular, we cross-randomize an intervention where households are
+ demonstrated how to prepare the new seed variety and get the ability to
+ taste it.
+\end_layout
+
+\begin_layout Abstract
+Keywords: technology adoption, subsidies, sunk cost effect, demonstration.
+\end_layout
+
+\begin_layout Abstract
+JEL: Q16, H24, O33, D91
 \end_layout
 
 \begin_layout Section
@@ -156,7 +164,7 @@ To introduce new agricultural technologies, some level of subsidy is often
  Private sector often use trail packs, as they realize farmers may be reluctant
  to try out a new product.
  Public actors may think commercial seed are out of reach of poor households
- and want to kick start adoption by providing the initial investment.
+ and want to kick start large scale adoption by providing the initial investment.
  The case for free (or subsidies) inputs also stems from potential externalities.
  For example, it is well established that one of the most effective ways
  to increase technology adoption is through peer learning, and both private
@@ -202,7 +210,8 @@ literal "false"
 \end_inset
 
 .
- Charging a price is assumed to increase use through three mechanisms.
+ There are at least three ways in which charging a price may lead to increased
+ usage.
  The first is a 
 \emph on
 screening effect
@@ -224,12 +233,12 @@ signal for quality
 \end_layout
 
 \begin_layout Standard
-While the main outcome in the debate if often intended use, we go one step
- further.
- Not only do we want to know if farmers use trial packs given for free different
-ly than trial packs they paid for, we also want to know if there is a difference
- in the outcome the trial pack was intended for: subsequent adoption of
- the seed in the next year when free packs are not available anymore.
+In general, studies on subsidized inputs in the health sector focus most
+ on intended use as the primary outcome.
+ In our case, intended use is considered a an interesting intermediary outcome;
+ we are most interested in the learning that emanates from the (subsidized)
+ seed pack as evidenced by subsequent adoption of the seed in the next year
+ when free packs are not available anymore.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -256,12 +265,41 @@ Supply chain upgrading is generally instigated by both push factors (such
  as the introduction of new varieties or production techniques that increase
  productivity) and pull factors (such as increased demand through opening
  up of an export market).
- In seed supply chains, demand for a new seed in terms of consumption is
- often overlooked.
- Previous exploratory data analysis suggests that ease of cooking is a character
-istic on the consumer side that is deemed important in a range of context
- and for different crops.
+ In seed supply chains, demand for a new seed variety in terms of its consumptio
+n traits is often overlooked.
+ Previous exploratory data analysis suggests that both ease of cooking and
+ taste are the most important characteristics on the consumer side.
+ As such, we cross-randomize an intervention in where households are provided
+ with the opportunity to discover these traits, for example by organizing
+ cooking contests or recipe demonstrations 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1093/jn/137.5.1320"
+literal "false"
+
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Standard
+This document serves as a pre-analysis plan for the study that will be registere
+d in a public repository.
+ It provides background information, outlines hypotheses which will be tested,
+ tools that will be used in the field, power calculations and sample size
+ projections on which sampling is based, outcome variables that will be
+ used to assess impact, and specification that will be estimated.
+ As such, it will provide a useful reference in evaluating the final results
+ of the study 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "humphreys_sanchezdelasierra_vanderwindt_2013,651546"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -303,7 +341,8 @@ literal "false"
 \end_inset
 
  but there it ended up on the online appendix.
- However, a BDM may be a better way.
+ However, a BDM may be a better way to identify sunk cost effects and selection
+ effect.
  Indeed, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -314,10 +353,7 @@ literal "false"
 
  argue that their procedure correlates to WTP.
  But a BDM directly measures WTP.
-\end_layout
-
-\begin_layout Standard
-BDM seems to work pretty well in practice 
+ BDM seems to work pretty well in practice 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "BURCHARDI2021102701"
@@ -326,6 +362,13 @@ literal "false"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+It is striking that the vast majority of studies on technology adoption
+ are supply side interventions, such as bundling new technologies with insurance
+, subsidizing new seed, or information provision of the new seed, while
+ there are only a few studies of consumer side interventions.
  
 \end_layout
 
@@ -406,9 +449,6 @@ Experimental design and contrasts
 The cluster randomize control trial will take the form of a 2x2 factorial
  design.
  Each factor has a control and a treatment level.
- For the first factor, the treatment level consists of receiving a free
- trial pack of seed.
- For the second factor, the treatment level still needs to be specified.
  The clusters will be villages, in which a fixed number of households will
  be selected.
 \end_layout
@@ -434,6 +474,35 @@ To study screening and sunk cost effects, we confine ourselves to the treatment
 
 \begin_layout Section
 Treatments
+\end_layout
+
+\begin_layout Standard
+There will be two main treatments in this experiment, each corresponding
+ to one of the two factors in the 2x2 factorial design.
+ 
+\end_layout
+
+\begin_layout Standard
+For the first factor, the treatment level will consist of a seed trail pack
+ that the household receives.
+ This trial pack will be an improved seed variety (hybrid seed) that is
+ available in the market but at the same time not yet widely adopted by
+ farmers.
+ The control level for this factor will simply be the absence of a seed
+ trial pack, that is, these household will not receive a seed trial pack.
+ However, in both treatment and control groups, we will inform farmers about
+ the existence of the improved seed variety and the benefits of using them,
+ to be able to isolate the effect of the trail pack from merely knowledge
+ effects.
+\end_layout
+
+\begin_layout Standard
+For the second factor, the treatment level consists of an event where farmers
+ are shown how easy it is to prepare food grown with the improved variety
+ and farmers are allowed to taste.
+ Also here, control level for this factor will again be the absence of these
+ events, that is, households in control villages will not be exposed to
+ such events.
 \end_layout
 
 \begin_layout Section
@@ -553,7 +622,7 @@ literal "false"
 \end_inset
 
 .
- Inter cluster(within village) correlation for this outcome has been estimated
+ Inter cluster (within village) correlation for this outcome has been estimated
  to be 0.15.
  We assume similar treatment effects for both the seed trail treatment and
  the consumption (a 13.5 percentage point increase).
@@ -650,10 +719,6 @@ name "fig:Design"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -708,10 +773,6 @@ Timeline
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
