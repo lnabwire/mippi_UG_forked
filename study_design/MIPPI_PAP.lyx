@@ -9,7 +9,7 @@
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -30,7 +30,17 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, urlcolor=blue, citecolor=blue, pdfstartview={FitH}, hyperfootnotes=false, unicode=true"
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -121,33 +131,31 @@ Increasing Adoption and Varietal Turnover of Seed—A Pre-Analysis Plan for
 \begin_layout Abstract
 To increase adoption of new agricultural technologies, both push (supply
  side) and pull (demand side) factors are important.
- As a push factor to increase adoption of a particular technology such as
- an improved seed variety, some level of initial subsidy is often offered.
- For instance, companies may offer free trial packs of new improved seed
- varieties; governments may offer subsidies to increase varietal turnover.
- However, it is also often argued that if something was subsidized (or even
- free), it may not be used for the intended purpose.
- In this paper, we first test the effectiveness of free trial packs by testing
- if farmers that receive a sample of a new improved seed variety are more
- likely to adopt it in the future than a control group of farmers who did
- not get a free sample.
+ A popular supply side intervention to increase adoption of a particular
+ technology is some level of subsidy.
+ However, it is often argued that if something was subsidized (or even provided
+ for free), it may not be used for the intended purpose.
+ In this paper, we test if farmers that receive a sample of a new improved
+ seed variety are more likely to adopt it in the future than a control group
+ of farmers who did not get a free sample.
  Furthermore we test whether farmers learn differently from seed that was
  obtained for free than if they had to pay a (small) price for it.
- This questions is investigated using BDM auction—essentially a two stage
- pricing design—such that we can disentangle the selection effect, whereby
- farmers that are prepared to pay a price are likely to be more motivated
- to learn from it for subsequent adoption decisions, and the sunk cost effect,
- where a product that has a price attached to it is valued more.
+ The latter is investigated using a Becker–DeGroot–Marschak (BDM) auction
+ such that we can disentangle the selection effect, whereby farmers that
+ are prepared to pay a price are likely to be more motivated to learn from
+ it for subsequent adoption decisions, from the sunk cost effect, where
+ a product that has a price attached to it is valued more.
  In addition to the supply side intervention, we also test the relative
- effectiveness of a demand sided intervention for adoption of new or improved
- varieties—an area often overlooked in existing research.
+ effectiveness of a demand sided intervention to increase adoption of improved
+ seed varieties.
  In particular, we cross-randomize an intervention where households are
  demonstrated how to prepare the new seed variety and get the ability to
  taste it.
 \end_layout
 
 \begin_layout Abstract
-Keywords: technology adoption, subsidies, sunk cost effect, demonstration.
+Keywords: technology adoption, subsidies, screening effect, sunk cost effect,
+ demonstration.
 \end_layout
 
 \begin_layout Abstract
@@ -159,16 +167,30 @@ Motivation
 \end_layout
 
 \begin_layout Standard
-To introduce new agricultural technologies, some level of subsidy is often
- used.
- Private sector often use trail packs, as they realize farmers may be reluctant
- to try out a new product.
+In development economics, long run change often requires both push and pull
+ factors simultaneously creating to a new equilibrium.
+ For example, value chain upgrading often involves some kind of acceleration
+ in the demand of the underlying commodity downstream (for instance after
+ opening up of a new export market) and a matched supply side disruption
+ upstream (such as a technological innovation that increases productivity).
+ Similar arguments may hold for the adoption of a new technology, where
+ farmers may change behavior in response to both the supply of the new technolog
+y and an increase in demand for the commodity that emanates from the new
+ technology.
+\end_layout
+
+\begin_layout Standard
+A popular supply side intervention to introduce a new agricultural technology
+ is some level of subsidy.
+ Private sector actors such as seed companies or agro-input dealers often
+ use trail packs, as they realize farmers may be reluctant to try out a
+ new product.
  Public actors may think commercial seed are out of reach of poor households
- and want to kick start large scale adoption by providing the initial investment.
- The case for free (or subsidies) inputs also stems from potential externalities.
- For example, it is well established that one of the most effective ways
- to increase technology adoption is through peer learning, and both private
- and public partners may attempt to leverage social learning 
+ and want to kick-start large scale adoption by providing the initial investment.
+ The case for free (or subsidized) inputs also stems from potential externalitie
+s: it is well established that one of the most effective ways to increase
+ technology adoption is through peer learning, and both private and public
+ partners may attempt to leverage social learning 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1257/aer.100.1.35,https://doi.org/10.1111/j.1468-0297.2006.01115.x"
@@ -191,16 +213,15 @@ literal "false"
  Injecting new seed varieties can be an important strategy to improve the
  overall seed stock in the informal sector.
  For instance, public research organizations often invest in open pollinating
- varieties (OPVs) that can be recycled to some extent without losing yield
- potential.
+ varieties (OPVs) that can be recycled to some extent without losing vigor.
 \end_layout
 
 \begin_layout Standard
 At the same time, it is often argued that providing goods or services for
  free distorts the utility people attach to it.
- As a result, the good or service remains unused, is resold, or used in
- unintended ways.
- Examples include the use of free bednets for fishing or the use of subsidized
+ As a result, the good or service remains unused, is resold, or otherwise
+ used in unintended ways.
+ Examples include the use of free bed-nets for fishing or the use of subsidized
  chlorine for cleaning (instead of drinking water treatment) 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -210,14 +231,18 @@ literal "false"
 \end_inset
 
 .
- There are at least three ways in which charging a price may lead to increased
+ 
+\end_layout
+
+\begin_layout Standard
+There are at least three ways in which charging a price may lead to increased
  usage.
  The first is a 
 \emph on
 screening effect
 \emph default
-, whereby only people who really value the product will acquire the product,
- while those who do not intent to use it do not.
+, whereby only people who really value the product will acquire the product
+ (while those who do not intent to use it will be less likely to buy it).
  A second is more psychological in nature and conjectures that people are
  prone to
 \emph on
@@ -235,10 +260,10 @@ signal for quality
 \begin_layout Standard
 In general, studies on subsidized inputs in the health sector focus most
  on intended use as the primary outcome.
- In our case, intended use is considered a an interesting intermediary outcome;
- we are most interested in the learning that emanates from the (subsidized)
- seed pack as evidenced by subsequent adoption of the seed in the next year
- when free packs are not available anymore.
+ In our case, intended use is considered an intermediary outcome; we are
+ most interested in the learning that emanates from the (subsidized) seed
+ pack as evidenced by subsequent adoption of the seed in the next year when
+ the seed is not subsidized anymore.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -256,22 +281,31 @@ literal "false"
  That is, if a seed is valued less because it is provided for free, it may
  also be that farmers put in less effort and complementary investment when
  experimenting, and pay less attention to outcomes.
- Examples include sowing free seed on sub-optimal plots or mixing the free
- seed with farmer saved seed, which would make it hard to learn.
+ Examples include planting subsidized seed on sub-optimal plots or mixing
+ subsidized seed with farmer-saved seed, which would make learning harder.
+ 
 \end_layout
 
 \begin_layout Standard
-Supply chain upgrading is generally instigated by both push factors (such
- as the introduction of new varieties or production techniques that increase
- productivity) and pull factors (such as increased demand through opening
- up of an export market).
- In seed supply chains, demand for a new seed variety in terms of its consumptio
-n traits is often overlooked.
- Previous exploratory data analysis suggests that both ease of cooking and
- taste are the most important characteristics on the consumer side.
- As such, we cross-randomize an intervention in where households are provided
- with the opportunity to discover these traits, for example by organizing
- cooking contests or recipe demonstrations 
+Studies on adoption often focus solely on the supply side, and it is assumed
+ that supply related attributes such as high yield or drought resistance
+ are also the traits that farmers seek.
+ As such, in information dissemination and marketing of new seeds, these
+ attributes are singled out.
+ However, previous exploratory data analysis suggests that both ease of
+ cooking and taste are also important characteristics that determine the
+ choice of what varieties to adopt.
+\end_layout
+
+\begin_layout Standard
+In this research, we evaluate the relative effectiveness of two interventions
+ designed to increase varietal turnover of maize seed in Uganda.
+ A first intervention targets the supply side and consists of providing
+ farmer with the technology at a subsidized (up to 100 percent) price.
+ A second intervention targets the demand side.
+ Here we create demand for maize by cooking demonstrations where farmers
+ can familiarize themselves with maize derived from the improved seed varieties
+ and taste 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "10.1093/jn/137.5.1320"
@@ -280,6 +314,21 @@ literal "false"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+The above also suggests that the size of the subsidy and the relative magnitude
+ of screening and sunk cost effects are important unknowns when evaluating
+ supply interventions to promote seed varietal turnover.
+ As such, the intervention that targets the supply side has three treatment
+ arms.
+ In one treatment arm, a seed trial pack is provided for free.
+ In a second treatment arm, a two stage pricing design is used, where we
+ first ask farmers how much they are willing to pay to identify the screening
+ effect, and then provide a discount to isolate the sunk cost effect.
+ The third treatment arm is the control group, who does not get access to
+ (free or discounted) seed.
  
 \end_layout
 
@@ -307,31 +356,117 @@ Relation to the literature
 \end_layout
 
 \begin_layout Standard
-Most studies look at experimental trials at research stations.
- Even in 
+As the use of seed trial packs touches on many constraints, our study touches
+ on various strands of the literature.
+ For instance, providing free or subsidized seed directly to farmers removes
+ access related constraints, such as situations where agro-input dealers
+ would not have sufficient stocks of seed at the right moment 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "van2018performance"
+LatexCommand citep
+key "shiferaw2008technology"
 literal "false"
 
 \end_inset
 
-, the trails were research-managed farm trials set up on demonstration plots.
- More importantly, 
+.
+ Seed trial packs are often distributed to enable farmers to overcome aversion
+ to risk, ambiguity, or other forms of uncertainty 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "van2018performance"
+LatexCommand citep
+key "https://doi.org/10.1002/aepp.13003,boucher2021bundling"
 literal "false"
 
 \end_inset
 
- only look at intention to adopt in the future, while we will consider actual
- adoption in the next season.
+.
+ The amount of subsidy also removes financial constraints 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ABATE2016235"
+literal "false"
+
+\end_inset
+
+.
+ The opportunity to learn from trial packs may also be a substitute for
+ information provided by agricultural advisory services 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "https://doi.org/10.1111/agec.12175,https://doi.org/10.1002/ajae.12089"
+literal "false"
+
+\end_inset
+
+.
+ As mentioned above, new technologies are also sometimes subsidized by governmen
+ts in the hope that model farmers set up demonstration plots to encourage
+ peer learning 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "10.1257/aer.100.1.35"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The use of BDM to isolate screening and sunk cost effects has not been done
- that often.
+That said, there are surprisingly few studies that directly evaluate the
+ effectiveness of seed trial packs to accelerate technology adoption.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "biedny2020demonstration"
+literal "false"
+
+\end_inset
+
+ find that in Tanzania, adding trial packs to demonstration plots in the
+ context of village based agricultural advisors does not significantly affect
+ input sales, orders received, or learning.
+ In many studies, the impact of seed packs itself are not the subject of
+ research, but rather some attribute of the seed (like the risk reduction
+ potential, 
+\begin_inset CommandInset citation
+LatexCommand citealp
+before "eg."
+key "boucher2021bundling"
+literal "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Also related is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MORGAN2020101955"
+literal "false"
+
+\end_inset
+
+, who compare different extension approaches, one of which involves the
+ use of trial packs.
+ Their outcome is not subsequent adoption of the new technology, but the
+ willingness to pay, which is elicited using a BDM.
+ As such, their interest is more in explaining dis-adoption once new technologie
+s are sold through traditional market channels.
+ They find that, in the southern highlands of Tanzania, bean farmers' willingnes
+s to pay is not affected by seed trial packs.
+\end_layout
+
+\begin_layout Standard
+The relationship between effectiveness and the size of the subsidy, and
+ in particular the hypothesis that free good may be less effective than
+ paid for goods, has been studied in the context of public health interventions,
+ such as the adoption of insecticide treated bednets.
+ To our knowledge, we are the first to address this question in the context
+ of agricultural technology adoption.
+ The use of BDM to isolate screening and sunk cost effects is also not very
+ common.
  As far as we know, it was only done by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -340,9 +475,26 @@ literal "false"
 
 \end_inset
 
- but there it ended up on the online appendix.
+, but in the final version of their paper the analysis was deferred to the
+ online appendix because of no significant effects and space constraints.
  However, a BDM may be a better way to identify sunk cost effects and selection
- effect.
+ effect than the two stage pricing designs used in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1162/qjec.2010.125.1.1"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "10.1257/aer.100.5.2383"
+literal "false"
+
+\end_inset
+
+.
  Indeed, 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -351,9 +503,10 @@ literal "false"
 
 \end_inset
 
- argue that their procedure correlates to WTP.
- But a BDM directly measures WTP.
- BDM seems to work pretty well in practice 
+ argue that their procedure only correlates to WTP (while a BDM directly
+ measures WTP).
+ Recent research also suggests that BDM seems to work pretty well in practice
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "BURCHARDI2021102701"
@@ -362,36 +515,60 @@ literal "false"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-It is striking that the vast majority of studies on technology adoption
- are supply side interventions, such as bundling new technologies with insurance
-, subsidizing new seed, or information provision of the new seed, while
- there are only a few studies of consumer side interventions.
  
 \end_layout
 
+\begin_layout Standard
+There seem to be even less studies that look at demand side interventions
+ to spur technology adoption.
+ In general, demand side interventions such as cooking demonstrations are
+ primarily concerned about nutrition education 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "eg."
+key "REICKS2014259"
+literal "false"
+
+\end_inset
+
+.
+ Experiential interventions like tasting rarely go all the way back to decisions
+ on what to plant.
+\end_layout
+
 \begin_layout Section
-Method
+Methods and experimental design
 \end_layout
 
 \begin_layout Standard
 We use a standard field experiment to test the effectiveness of free trial
  packs and the consumer side interventions.
- In particular, using a 2x2 cluster randomized control trial we test if
- farmers that receive a sample of a new improved seed variety are more likely
- to adopt it in the future than a control group of farmers who did not get
- a sample, and if farmers that are exposed to a consumer side intervention
- are are more likely to adopt it in the future than a control group of farmers
- who were not exposed to this intervention.
+ To do so, we will use a cluster randomize control trial that takes the
+ form of a 2x2 factorial design.
+ Each factor has a control and a treatment level and the clusters will be
+ villages, in which a fixed number of households will be selected.
  
+\end_layout
+
+\begin_layout Standard
+The first factor corresponds to the supply side treatment.
+ In the treatment level of this factor, farmers in treatment villages receive
+ a free sample of a new improved seed variety (bazooka).
+ In the control level of this factor, farmers do not receive a free sample
+ pack (but they do get something of similar value (a so-called token of
+ appreciation) to account for potential income effects).
+ The second factor corresponds to the demand side intervention.
+ In the treatment level of this factor, farmers in treatment villages will
+ be exposed to a cooking demonstration where farmers are provided with the
+ opportunity to taste food prepared using the promoted variety.
+ In the control level of this factor, we will not organize these kind of
+ events.
 \end_layout
 
 \begin_layout Standard
 To test whether farmers learn differently from seed that was obtained for
  free than if they had to pay a (small) price for it, we use a randomized
- two-stage pricing design to isolate the sunk-cost effect from the overall
+ two-stage pricing design to isolate the sunk-cost effect from the screening
  effect 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -402,17 +579,18 @@ literal "false"
 
 .
  In such designs, subjects are offered a service or good for a particular
- price (or prices) in a first stage.
+ price in a first stage.
  In a second stage, a discount is applied to that price.
- Regressing product use on the price while controlling for the discount
- gives an estimate of the screening effect of the price, while regressing
- product use on the discount while controlling for the price gives an estimate
- of the sunk cost effect.
+ Regressing outcomes (such as whether the product is used for the intended
+ purpose) on the price while controlling for the discount gives an estimate
+ of the screening effect of the price; regressing outcomes on the discount
+ while controlling for the price gives an estimate of the sunk cost effect.
 \end_layout
 
 \begin_layout Standard
-A standard Becker-Degroot-Marschak auction can be used to disentangle the
- sunk cost and screening effect 
+A standard Becker-Degroot-Marschak (BDM) auction is essentially a two stage
+ pricing design and can be used to disentangle the sunk cost and screening
+ effect 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "https://doi.org/10.1002/bs.3830090304"
@@ -441,18 +619,6 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Section
-Experimental design and contrasts
-\end_layout
-
-\begin_layout Standard
-The cluster randomize control trial will take the form of a 2x2 factorial
- design.
- Each factor has a control and a treatment level.
- The clusters will be villages, in which a fixed number of households will
- be selected.
-\end_layout
-
 \begin_layout Standard
 To study screening and sunk cost effects, we confine ourselves to the treatment
  factor of the seed trial intervention (that is, half of the sample that
@@ -477,12 +643,6 @@ Treatments
 \end_layout
 
 \begin_layout Standard
-There will be two main treatments in this experiment, each corresponding
- to one of the two factors in the 2x2 factorial design.
- 
-\end_layout
-
-\begin_layout Standard
 For the first factor, the treatment level will consist of a seed trail pack
  that the household receives.
  This trial pack will be an improved seed variety (hybrid seed) that is
@@ -503,71 +663,6 @@ For the second factor, the treatment level consists of an event where farmers
  Also here, control level for this factor will again be the absence of these
  events, that is, households in control villages will not be exposed to
  such events.
-\end_layout
-
-\begin_layout Section
-Policy relevance 
-\end_layout
-
-\begin_layout Standard
-The existence of a substantial sunk cost effect would mean that providing
- seed for free is not an effective strategy.
- One of the cool things about the experiment is also that you can do some
- simple cost-effectiveness estimates with some simple assumptions about
- peer learning etc.
-\end_layout
-
-\begin_layout Section
-Other thoughts
-\end_layout
-
-\begin_layout Standard
-While cost sharing may increase effectiveness, it reduces demand.
- This could be an issue when those that are likely to select out are also
- the ones that you are targeting: the benefits of learning may be higher
- for those that are more cash or credit constrained.
-\end_layout
-
-\begin_layout Standard
-Potential problem: we need to make sure enough farmers buy in the BDM, to
- make sure we have enough power in the second stage.
-\end_layout
-
-\begin_layout Standard
-Also include: charging a price versus not is also related to sustainability.
- Discuss that private sector may have different intentions with subsidized
- trial packs than eg government, so the former may be more interested in
- one-off discounts, while the latter may be looking more at longer run agro-inpu
-t support programs.
-\end_layout
-
-\begin_layout Standard
-Getting gender in: 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1257/aer.99.2.236"
-literal "false"
-
-\end_inset
-
- further explores how charging for health products versus subsidizing affects
- distribution of benefits within the household.
- Using the case of insecticide treated bed-nets as in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1162/qjec.2010.125.1.1"
-literal "false"
-
-\end_inset
-
-, they argue that there may be different reasons why free bednets may be
- used more for protecting children than bednets that need to be paid for.
- they conclude that these findings may have implications for the design
- of programs targeting particular groups at the sub-household level.
- In line with this, we may want to investigate how free pack vs payed seed
- affect decision making within households.
- That is, if the (male) decision maker gets seed for free, does he allow
- more participation from the wife than if he made the decision to buy it?
 \end_layout
 
 \begin_layout Section
@@ -732,6 +827,10 @@ We will not run formal power calculations for the BDM based experiment (but
 \end_layout
 
 \begin_layout Section
+Estimation and inference
+\end_layout
+
+\begin_layout Section
 Timeline
 \end_layout
 
@@ -751,7 +850,7 @@ Ideally we would distribute trail packs together with baseline data collection
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -782,50 +881,193 @@ Timeline
 \end_layout
 
 \begin_layout Section
-Outcomes
+Context
 \end_layout
 
 \begin_layout Standard
-We differentiate between outcomes at mideline and outcomes at endline.
+The study will be implemented in Eastern Uganda in an area known as the
+ Busoga Kingdom.
+ The study population consists of smallholder maize farmers.
+ To get a random sample of the population, villages will be randomly selected
+ with probability proportionate the the number of households living in the
+ village.
+ In each sampled village, 10 households will be randomly selected to participate
+ in the study.
+\end_layout
+
+\begin_layout Section
+Variables
+\end_layout
+
+\begin_layout Standard
+In this section, we register the variables that will be used in the study.
+ We differentiate between outcomes at midline and outcomes at endline.
  At midline, we are primarily interested in the use of the trial seed pack,
  at endline we focus on adoption in subsequent years.
  
 \end_layout
 
 \begin_layout Subsection
+Baseline variables for balance
+\end_layout
+
+\begin_layout Standard
+Standard orthogonality tables will be included in the final paper.
+ We pre-register 10 variables.
+ Half of these are characteristics that are unlikely to be affected by the
+ intervention, while the other 5 are picked from the primary and secondary
+ endline outcomes listed in the next subsection.
+ The following variables will be compared at baseline:
+\end_layout
+
+\begin_layout Enumerate
+Age of household head - years (q14)
+\end_layout
+
+\begin_layout Enumerate
+Household head has finished primary education - 1 is yes (q17)
+\end_layout
+
+\begin_layout Enumerate
+Gender of household head - 1 is male (q15)
+\end_layout
+
+\begin_layout Enumerate
+Household size - number of people in household/that eats in house on a regular
+ basis (including interviewee) (q18)
+\end_layout
+
+\begin_layout Enumerate
+Distance of homestead to nearest agro-input shop selling maize seed - km
+ (q10)
+\end_layout
+
+\begin_layout Enumerate
+Has used quality maize seed on any plot in last season - 1 is yes (q25a)
+\end_layout
+
+\begin_layout Enumerate
+Has used the promoted seed (bazooka) on a randomly chosen plot in the last
+ season (q31)
+\end_layout
+
+\begin_layout Enumerate
+Where did you obtain the seed from for the maize planted on the randomly
+ selected plot in the previous season? (q32) - more formal (eg agro-input
+ dealer, operation wealth create) is better
+\end_layout
+
+\begin_layout Enumerate
+How often was the seed that was used on the randomly selected plot recycled?
+ (q34)
+\end_layout
+
+\begin_layout Enumerate
+Maize yields on a randomly chosen plot in last season - production/size
+ of plot (q29, q50, q51) 
+\end_layout
+
+\begin_layout Subsection
 Outcomes at midline
 \end_layout
 
-\begin_layout Itemize
-was trial pack used? Details on how the package was used.
- Was was it mixed with landraces, or was it planted on a particular plot?
- Was it intercroped? Detailed questions about the use of complementary inputs
- such as labour, fertilizer, chemicals.
- Detailed questions about management practices (time of planting, seed rate
- and spacing, weeding,...)
+\begin_layout Standard
+We plan to do a midline survey in August 2023.
+ As mentioned above, at midline, we are particularly interested in the use
+ of trial packs and whether something was learned from it.
+ As such, only households that received a trial pack (either free or subsidized)
+ will be asked the questions below.
+ However, all households will be revisited, as at this time the consumption
+ side treatment will be implemented.
 \end_layout
 
-\begin_layout Itemize
-yields from trial pack
+\begin_layout Enumerate
+Was trial pack used as seed on the farm? (as opposed to sold, eaten,...)
 \end_layout
 
-\begin_layout Itemize
-yields from normal field
+\begin_layout Enumerate
+How was the seed trial package was used? (pure on separate plot, mixed with
+ landraces, mixed with bazooka from other source, mixed with other improved
+ seed,...) 
 \end_layout
 
-\begin_layout Itemize
-perceptions related to the quality of the seed
+\begin_layout Enumerate
+Was it intercroped? 
 \end_layout
 
-\begin_layout Itemize
-questions on intentions for next season.
+\begin_layout Enumerate
+What seed/plant spacing was used for the trail pack? 
+\end_layout
+
+\begin_layout Enumerate
+Number of seeds per hill usedfor the trail pack? 
+\end_layout
+
+\begin_layout Enumerate
+Did you apply organic manure to the soil for the trail pack? 
+\end_layout
+
+\begin_layout Enumerate
+Did you apply DAP **(black in color)** or NPK (brown in color) for the trail
+ pack? 
+\end_layout
+
+\begin_layout Enumerate
+Did you apply Urea **(white in color)** for the trail pack? 
+\end_layout
+
+\begin_layout Enumerate
+How many times did you weed the trial pack maize plot? 
+\end_layout
+
+\begin_layout Enumerate
+How many days after planting did you do first weeding on the trail pack
+ plot? 
+\end_layout
+
+\begin_layout Enumerate
+Did you use any pesticides, herbicides or fungicides on the trail pack plot?
+ 
+\end_layout
+
+\begin_layout Enumerate
+When did you plant the trail pack seed? 
+\end_layout
+
+\begin_layout Enumerate
+Did you re-sow where seeds did not germinate on the trial seed plot? If
+ so, what seed variety did you used of gap filling
+\end_layout
+
+\begin_layout Enumerate
+area planted with trial pack?
+\end_layout
+
+\begin_layout Enumerate
+production from trial pack?
+\end_layout
+
+\begin_layout Enumerate
+yields from trial pack plot?
+\end_layout
+
+\begin_layout Enumerate
+perceptions related to the quality of the trial pack seed (bazooka).
+\end_layout
+
+\begin_layout Enumerate
+Were you happy with the bazooka?
+\end_layout
+
+\begin_layout Enumerate
+What seed are you planning to use in next season?
 \end_layout
 
 \begin_layout Subsection
 Outcomes at endline
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Primary outcomes
 \end_layout
 
@@ -833,75 +1075,298 @@ Primary outcomes
 The main aim of the project is to find ways to increase varietal turnover.
  Most primary outcomes are therefore related to seed use in years subsequent
  to the intervention.
+ We define 10 primary outcomes that will also be combined in a summary index
+ test following 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1198/016214508000000841"
+literal "false"
+
+\end_inset
+
+.
+ Therefore, all primary outcomes have an unambiguous expected effect.
 \end_layout
 
-\begin_layout Itemize
-Details on how the seed that was used.
- Was it the same seed as the one used in the treatment or was it another
- improved variety (which would also serve the purpose)? Was it bought or
- was it recycled from the seed that was given? Varietal age.
+\begin_layout Enumerate
+has used quality maize seed (hybrid/OPV obtained from credible source and
+ not recycled too often) on any plot in last season - 1 is yes (q25a)
 \end_layout
 
-\begin_layout Itemize
-Was was it mixed with landraces, or was it planted on a particular plot?
- Was it intercroped? 
+\begin_layout Enumerate
+has used Bazooka on any plot in last season in last season - 1 is yes (q25aa)
 \end_layout
 
-\begin_layout Itemize
-Detailed questions about the use of complementary inputs such as labour,
- fertilizer, chemicals.
- Detailed questions about management practices (time of planting, seed rate
- and spacing, weeding,...)
+\begin_layout Enumerate
+has used improved seed (hybrid/OPV obtained from credible source and not
+ recycled too often) on a randomly chosen plot in the last season - 1 is
+ yes (q31)
 \end_layout
 
-\begin_layout Itemize
-how was the seed obtained
+\begin_layout Enumerate
+has used the promoted seed (bazooka) on a randomly chosen plot in the last
+ season - 1 is yes (q31)
 \end_layout
 
-\begin_layout Itemize
-seed replacement rate
+\begin_layout Enumerate
+extensive margin improved seed use on random plot (kg improved seed (OPV
+ or hybrid)) (q38) - more is better
 \end_layout
 
-\begin_layout Itemize
-perceptions related to the quality of the seed
+\begin_layout Enumerate
+intensive margin improved seed use on random plot (kg improved seed (OPV
+ or hybrid)/area planted) (q38/q29) - more is better
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Enumerate
+How often was the seed that was used on the randomly selected plot recycled?
+ (q34) - less is better
+\end_layout
+
+\begin_layout Enumerate
+Where did you obtain the seed from for the maize planted on the randomly
+ selected plot in the previous season? (q32) - more formal (eg agro-input
+ dealer, operation wealth create) is better
+\end_layout
+
+\begin_layout Enumerate
+Would you use this seed that was used on the randomly selected plot in the
+ previous season again in the future? - 1 is yes (q37)
+\end_layout
+
+\begin_layout Enumerate
+maize yields on a randomly chosen plot in last season - production/size
+ of plot (q29, q50, q51) - more is better
+\end_layout
+
+\begin_layout Subsubsection
 Secondary outcome
 \end_layout
 
+\begin_layout Standard
+We define a range of secondary outcomes.
+ These are outcomes to explore impact pathways.
+ There are also some outcomes for which effects are not a-priori known.
+ 
+\end_layout
+
+\begin_layout Enumerate
+rating of taste of seed variety used on randomly selected field - 1 is good
+ (4) or very good (5) taste of variety - producer intervention impact pathway)
+ (q35g)
+\end_layout
+
+\begin_layout Enumerate
+Seed variety that was planted on the randomly selected crop in the previous
+ season (to test if farmers has experience - consumption intervention impact
+ pathway)?
+\end_layout
+
+\begin_layout Enumerate
+was it intercropped? (q30) - if yes, ask for secondary crop (q30a) and percentag
+e allocations (q30b)
+\end_layout
+
+\begin_layout Enumerate
+crop residue use (cr_use_grp)
+\end_layout
+
+\begin_layout Enumerate
+cost of the seed (q39)
+\end_layout
+
+\begin_layout Enumerate
+where was the seed obtained from? (q32)
+\end_layout
+
+\begin_layout Enumerate
+Was the female co-head involved in the decision to use a particular type
+ of seed on the randomly selected plot? (q34a)
+\end_layout
+
+\begin_layout Enumerate
+Was the female co-head involved in the decision on what happened to the
+ crops harvested on the randomly selected plot? (q34aa)
+\end_layout
+
+\begin_layout Enumerate
+How much maize from the randomly selected plot was kept for own consumption?
+ (q55a)
+\end_layout
+
+\begin_layout Enumerate
+How much was kept for seed in the next agricultural season? (q56)
+\end_layout
+
+\begin_layout Enumerate
+What seed/plant spacing was used on random plot? (q40)
+\end_layout
+
+\begin_layout Enumerate
+Number of seeds per hill used on random plot? (q41)
+\end_layout
+
+\begin_layout Enumerate
+Did you apply organic manure to the soil on random plot? (q42)
+\end_layout
+
+\begin_layout Enumerate
+Did you apply DAP **(black in color)** or NPK (brown in color) on random
+ plot? (q43)
+\end_layout
+
+\begin_layout Enumerate
+Did you apply Urea **(white in color)** on random plot? (q44)
+\end_layout
+
+\begin_layout Enumerate
+How many times did you weed on random plot? (q45)
+\end_layout
+
+\begin_layout Enumerate
+How many days after planting did you do first weeding on random plot? (q46)
+\end_layout
+
+\begin_layout Enumerate
+Did you use any pesticides, herbicides or fungicides on random plot? (q47)
+\end_layout
+
+\begin_layout Enumerate
+When did you plant the seed on random plot? (q48)
+\end_layout
+
+\begin_layout Enumerate
+Did you re-sow where seeds did not germinate on random plot? (q49)
+\end_layout
+
+\begin_layout Enumerate
+Indicate time use (total man days per season) for male co-head, female co-head,
+ other HH members, hired in for:
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
-other key technologies that are crowded in (like fertilizer use, chemicals,
- labor,...)
+Field preparation 
 \end_layout
 
 \begin_layout Itemize
-production
+Planting 
 \end_layout
 
 \begin_layout Itemize
-area planted
+Weeding
 \end_layout
 
 \begin_layout Itemize
-inter-cropping
+Spraying 
 \end_layout
 
 \begin_layout Itemize
-market participation
+Harvesting 
 \end_layout
 
-\begin_layout Itemize
-consumption of improved variety
+\end_deeper
+\begin_layout Enumerate
+maize yields on a randomly chosen plot in last season - production/size
+ of plot (q29, q50, q51)
 \end_layout
 
-\begin_layout Section
-Questions
+\begin_layout Enumerate
+Did you sell any maize that you harvested from this randomly selected plot?
+ (q53)
+\end_layout
+
+\begin_layout Enumerate
+How many bags of maize did you sell from this randomly selected plot? (q54)
+\end_layout
+
+\begin_layout Enumerate
+Q24.
+ Are you a member of a farmer group, association or cooperative that is
+ involved in maize production? (q24)
+\end_layout
+
+\begin_layout Enumerate
+Wealth - consumption of most commonly consumed items
+\end_layout
+
+\begin_layout Enumerate
+Food security (R111 and R112)
+\end_layout
+
+\begin_layout Enumerate
+Subjective well-being, relative to others (R409) and over time (R110)
+\end_layout
+
+\begin_layout Section*
+Ethical clearance
 \end_layout
 
 \begin_layout Standard
-Timing: can we use money for fieldwork that was reserved for 2022 in 2023?
- Because as it looks, we will do the baseline only in 2023.
+This research received clearance form Makerere's School of Social Sciences
+ Research Ethics Committee () as well as from IFPRI IRB ().
+ The research was also registered at the Ugandan National Commission for
+ Science and Technology ().
+\end_layout
+
+\begin_layout Section*
+Transparency and replicability
+\end_layout
+
+\begin_layout Standard
+To maximize transparency and allow for replicabiliy, we use the following
+ strategies:
+\end_layout
+
+\begin_layout Itemize
+pre-analysis plan: the current document provides an ex-ante step-by-step
+ plan setting out the hypothesis we will test, the intervention we will
+ implement to test these hypotheses, the data that will be collected and
+ specifications we will run to bring the hypotheses to the data.
+ This pre-analysis plan will be pre-registered at the AEA RCT registry.
+\end_layout
+
+\begin_layout Itemize
+revision control: the entire project will be under revision control (that
+ is time stamped track changes) and committed regularly to a public repository
+ (github).
+\end_layout
+
+\begin_layout Itemize
+mock report: After baseline data is collected, a pre-registered report will
+ be produced and added to the AEA RCT registry and GitHub.
+ This report will differ from the pre-analyisis plan in that it already
+ has the tables filled with simulated data (drawn from the baseline).
+ The idea is that after the endline, only minimal changes are necessary
+ (basically connecting a different dataset) to obtain the final result,
+ further reducing the opportunity of specification search.
+\end_layout
+
+\begin_layout Section*
+Funding
+\end_layout
+
+\begin_layout Standard
+This research is part of the 
+\begin_inset CommandInset href
+LatexCommand href
+name "OneCG Market Intelligence Initiative"
+target "https://www.cgiar.org/initiative/market-intelligence/"
+literal "false"
+
+\end_inset
+
+ which is funded by a 
+\begin_inset CommandInset href
+LatexCommand href
+name "consortium of donors"
+target "https://www.cgiar.org/funders/"
+literal "false"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
