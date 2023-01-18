@@ -788,7 +788,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename design_pic.png
-	scale 25
+	scale 40
 
 \end_inset
 
@@ -887,7 +887,16 @@ Context
 \begin_layout Standard
 The study will be implemented in Eastern Uganda in an area known as the
  Busoga Kingdom.
- The study population consists of smallholder maize farmers.
+ We will sample from 4 districts that have relatively low adoption (compared
+ to neighboring villages) but a good network of agro-input dealers.
+ Using data that was previously collected as part of a different study,
+ we found that the districts of Kamuli, Mayuge, Bugweri, and Bugiri fit
+ these conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+The study population consists of smallholder maize farmers.
  To get a random sample of the population, villages will be randomly selected
  with probability proportionate the the number of households living in the
  village.
