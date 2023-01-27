@@ -830,6 +830,156 @@ We will not run formal power calculations for the BDM based experiment (but
 Estimation and inference
 \end_layout
 
+\begin_layout Standard
+We will use ANCOVA models to assess impact.
+ As randomization happened at the village level, we estimate a similar equation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y_{1ij}=\alpha+\beta_{S}T_{i}^{S}+\beta_{D}T_{i}^{D}+\beta_{I}T_{i}^{S}T_{i}^{D}+\delta Y_{0ij}+\varepsilon_{ij}\label{eq:one}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $T_{i}^{S}$
+\end_inset
+
+ is a dummy for the supply side intervention treatment status of village
+ 
+\emph on
+i
+\emph default
+ and 
+\begin_inset Formula $T_{i}^{D}$
+\end_inset
+
+ is a dummy for the demand side intervention treatment status of village
+ 
+\emph on
+i
+\emph default
+.
+ We also allow for an interaction effect between the two treatments and
+ control for baseline outcomes to improve precision.
+\end_layout
+
+\begin_layout Standard
+Factorial designs have recently been criticized for the proliferation of
+ underpowered studies and replication failure 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "muralidharan2019factorial"
+literal "false"
+
+\end_inset
+
+.
+ While in the previous section we ran power calculations based on models
+ with a complete set of interactions (as on equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:one"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we may still want to try boosting power by pooling observations across
+ the orthogonal treatment in the event that we find a treatment effect that
+ appears smaller than the minimal detectable effect size that we assumed
+ during power calculations.
+ To do so, we will consider the orthogonal treatment as a co-variate we
+ adjust for, and interact the treatment variable with the demeaned orthogonal
+ treatment.
+ This give a more robust version of the treatment estimate that corresponds
+ to the coefficient estimate of the treatment of interest after dropping
+ the interaction with orthogonal the treatment
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+see: https://blogs.worldbank.org/impactevaluations/what-should-you-do-experiments-
+factorial-designs
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Y_{1ij}=\alpha+\beta_{M}T_{i}^{M}+\beta_{O}\left(T_{i}^{O}-\bar{T^{O}}\right)+\beta_{I}T_{i}^{M}\left(T_{i}^{O}-\bar{T^{O}}\right)+\delta Y_{0ij}+\varepsilon_{ij}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where now 
+\begin_inset Formula $T_{i}^{M}$
+\end_inset
+
+ is a dummy for the main treatment and 
+\begin_inset Formula $T_{i}^{O}$
+\end_inset
+
+ is a dummy for the orthogonal treatment (which enters in deviations from
+ its means).
+\end_layout
+
+\begin_layout Standard
+Because we will test for treatment effects on a range of outcome measures,
+ we will deal with multiple outcomes and multiple hypotheses testing by
+ means of two approaches.
+ Firstly, we follow a method proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "anderson2008multiple"
+literal "false"
+
+\end_inset
+
+ and aggregate different outcome measures within each domain into single
+ summary indices.
+ Each index is computed as a weighted mean of the standardized values of
+ the outcome variables.
+ The weights of this efficient generalized least squares estimator are calculate
+d to maximize the amount of information captured in the index by giving
+ less weight to outcomes that are highly correlated with each other.
+ Combining outcomes in indices is a common strategy to guard against over-reject
+ion of the null hypothesis due to multiple inference.
+ However, it may also be interesting to see the effect of the intervention
+ on individual outcomes.
+ An alternative strategy to deal with the multiple comparisons problem is
+ to adjust the significance levels to control the Family Wise Error Rates
+ (FWER).
+ The simplest such method is the Bonferroni method.
+ However, the Bonferroni adjustment assumes outcomes are independent, and
+ so can be too conservative when outcomes are correlated.
+ We therefore use a Bonferroni adjustment which adjusts for correlation
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sankoh1997some,aker2016payment"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Timeline
 \end_layout
