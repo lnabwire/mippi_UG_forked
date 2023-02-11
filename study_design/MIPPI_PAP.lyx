@@ -114,7 +114,9 @@ thanks{Markets Trade and Institutions Division, International Food Policy
  Carly Trachtman
 \backslash
 thanks{Markets Trade and Institutions Division, International Food Policy
- Research Institute, Washington DC, USA}}
+ Research Institute, Washington DC, USA}, Gashaw Tadesse Abate
+\backslash
+footnotemark[4]}
 \end_layout
 
 \end_inset
@@ -140,11 +142,13 @@ To increase adoption of new agricultural technologies, both push (supply
  of farmers who did not get a free sample.
  Furthermore we test whether farmers learn differently from seed that was
  obtained for free than if they had to pay a (small) price for it.
- The latter is investigated using a Becker–DeGroot–Marschak (BDM) auction
- such that we can disentangle the selection effect, whereby farmers that
- are prepared to pay a price are likely to be more motivated to learn from
- it for subsequent adoption decisions, from the sunk cost effect, where
- a product that has a price attached to it is valued more.
+ The latter is investigated by providing farmers the opportunity to buy
+ seed, and then giving a discount to a random subset of these farmers.
+ Such two-stage pricing designs allows us we can disentangle the selection
+ effect, whereby farmers that are prepared to pay a price are likely to
+ be more motivated to learn from it for subsequent adoption decisions, from
+ the sunk cost effect, where a product that has a price attached to it is
+ valued more.
  In addition to the supply side intervention, we also test the relative
  effectiveness of a demand sided intervention to increase adoption of improved
  seed varieties.
@@ -451,7 +455,8 @@ literal "false"
 , who compare different extension approaches, one of which involves the
  use of trial packs.
  Their outcome is not subsequent adoption of the new technology, but the
- willingness to pay, which is elicited using a BDM.
+ willingness to pay, which is elicited using a Becker-DeGroot-Marschak (BDM)
+ auction.
  As such, their interest is more in explaining dis-adoption once new technologie
 s are sold through traditional market channels.
  They find that, in the southern highlands of Tanzania, bean farmers' willingnes
@@ -465,57 +470,6 @@ The relationship between effectiveness and the size of the subsidy, and
  such as the adoption of insecticide treated bednets.
  To our knowledge, we are the first to address this question in the context
  of agricultural technology adoption.
- The use of BDM to isolate screening and sunk cost effects is also not very
- common.
- As far as we know, it was only done by 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "doi:10.1086/705374"
-literal "false"
-
-\end_inset
-
-, but in the final version of their paper the analysis was deferred to the
- online appendix because of no significant effects and space constraints.
- However, a BDM may be a better way to identify sunk cost effects and selection
- effect than the two stage pricing designs used in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1162/qjec.2010.125.1.1"
-literal "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1257/aer.100.5.2383"
-literal "false"
-
-\end_inset
-
-.
- Indeed, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "10.1257/aer.100.5.2383"
-literal "false"
-
-\end_inset
-
- argue that their procedure only correlates to WTP (while a BDM directly
- measures WTP).
- Recent research also suggests that BDM seems to work pretty well in practice
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "BURCHARDI2021102701"
-literal "false"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -588,27 +542,18 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-A standard Becker-Degroot-Marschak (BDM) auction is essentially a two stage
- pricing design and can be used to disentangle the sunk cost and screening
- effect 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "https://doi.org/10.1002/bs.3830090304"
-literal "false"
+The two stage pricing design consist of a first stage where farmers are
+ offered the opportunity to buy a bag of seed from the enumerator in a way
+ that is as close as possible as how this happens in a real life setting
+ where bargaining is the norm.
+\begin_inset Foot
+status open
 
-\end_inset
-
-.
- In such an auction, farmers are asked to name the highest price they are
- prepared to pay for a particular good.
- Participants then enter a lottery where a price is drawn from a particular
- distribution.
- If the price the farmer was prepared to pay is higher than the price drawn,
- the farmer gets the item at the draw price.
- The difference between the farmer's reservation price and the price drawn
- is then an unexpected discount, and so the BDM provides us with the two
- components necessary to disentangle the screening and sunk cost effects:
- the willingness-to-pay and the transaction price 
+\begin_layout Plain Layout
+The initial plan (and how this was initially pre-registered) was to do this
+ using a Becker-DeGroot-Marschak (BDM) auction.
+ A standard BDM auction is essentially a two-stage pricing design and can
+ be used to disentangle the sunk cost and screening effects 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "doi:10.1086/705374"
@@ -617,25 +562,47 @@ literal "false"
 \end_inset
 
 .
+ However, after testing in the field, we found that too many farmers had
+ problems comprehending the procedure, struggling especially with the fact
+ that they could not bargain over the price.
+\end_layout
+
+\end_inset
+
+ The enumerator follows a standard script, stating that the price of seed
+ at the agro-input shop in town is 12,000.
+ The enumerator then explains what kind of seed it is and what the advantages
+ are.
+ The farmer is then encourage to name his/her first price.
+ A computer algorithm then determines a counter-offer that the enumerator
+ asks, reemphasizing why the first price was too low.
+ The farmer can then make a second bid.
+ Bargaining continues until the price difference between the bid and ask
+ price falls below a certain threshold (eg 1000) in which case the computer
+ instructs the enumerator to indicate that this is his/her last price.
+ The farmer can then decide to buy.
+ If the farmer does not want to buy we will still sell the seed at the last
+ bid made by the farmer.
+ To make the bargaining also incentive compatible for the enumerators, we
+ tell them in advance that the money that is collected from farmers during
+ this first stage will be divided and distributed equally among all the
+ enumerators.
 \end_layout
 
 \begin_layout Standard
-To study screening and sunk cost effects, we confine ourselves to the treatment
- factor of the seed trial intervention (that is, half of the sample that
- is used to power the 2x2 factorial design).
- In this subset, we match to each treated household a household that will
- be offered seed at a non-zero transaction cost.
- While all households in the treatment factor of the seed pack intervention
- will be subjected to a BDM, we will make sure that half of these individuals
- will receive a 100 percent discount (that is, make sure that the price
- the computer draws is zero).
- In reality, we will also have to take into account that some farmers may
- be naming a reservation price that is likely to be below the price drawn
- by the lottery.
- This problem can be controlled by making sure the computer always draws
- a price that is below the farmer reservation price.
- At the same time, if farmers get the opportunity to learn this, they are
- likely to underbid.
+The second stage of the design involves providing an unexpected discount
+ on the price.
+ Most pricing designs use a random discount to be included as a continuous
+ variable in the regression, or a set of equally spaced discounts.
+ The aim of this is often to set optimal subsidy level.
+ In our study, we want to maximize power and work with only one discount.
+ In particular, half of the farmers that bought seed will get all their
+ money back (100 percent discount).
+ The decision to use only a single full discount is also due to the fact
+ that we expect a discontinuity in the relationship (free versus paying,
+ even though it may be only a little) and the fact that we also want to
+ maximize sample size for a comparison between the 100 % discount and the
+ farmers that get the free seed trial pack.
 \end_layout
 
 \begin_layout Section
@@ -663,6 +630,26 @@ For the second factor, the treatment level consists of an event where farmers
  Also here, control level for this factor will again be the absence of these
  events, that is, households in control villages will not be exposed to
  such events.
+\end_layout
+
+\begin_layout Standard
+Treatment assignment will be at the village level, as we want to avoid that
+ a control farmer (that gets a bar of soap as a token of gratitude) lives
+ right next to a treatment farmer that gets a bag of maize seed for free.
+ We will work with 10 farmers per village, which is the maximum our field
+ teams can handle.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+During testing, we found that information about the opportunity to bargain
+ over the price of seed in one of the treatment groups traveled very quickly,
+ prompted us to reduce the number of households per village by half.
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section
@@ -738,17 +725,16 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-After running a series of power simulation where we optimize power for samples
- that vary over 2 dimensions (villages and households per village), we converged
- to a sample consisting of 110 villages with 20 households in each village.
- In this design, 55 villages or 1,100 households will receive a free trial
- pack and 55 villages or 1,100 households will be exposed to the consumption
+After running a series of power simulations, we converged to a sample consisting
+ of 148 villages with 10 households in each village.
+ In this design, 74 villages or 740 households will receive a free trial
+ pack and 74 villages or 740 households will be exposed to the consumption
  side treatment.
- Half of these will overlap, that is, about 27 villages or 540 households
+ Half of these will overlap, that is, about 37 villages or 370 households
  will receive both treatments.
  With this setting, we are not powered to detect the three effects simultaneousl
 y.
- In only 66 percent of cases we are able to estimate a positive effect at
+ In only 68 percent of cases we are able to estimate a positive effect at
  the five percent significance level for both treatments and their interaction.
  However, if we consider the treatments separately, we hit conventional
  power levels for both treatments, and get up to 0.97 for the interaction
@@ -820,10 +806,10 @@ name "fig:Design"
 \end_layout
 
 \begin_layout Standard
-We will not run formal power calculations for the BDM based experiment (but
- we will once the final sample is known calculate minimal detectable effect
- sizes for reference).
- As mentioned above, we will just add an extra column to the 2x2 design.
+We did not run formal power calculations for the research question related
+ to the screening and sunk cost effects; we just take the sample size for
+ a treatment cell in the factorial design and add an extra columns to the
+ design.
 \end_layout
 
 \begin_layout Section
@@ -1463,7 +1449,8 @@ Ethical clearance
 
 \begin_layout Standard
 This research received clearance form Makerere's School of Social Sciences
- Research Ethics Committee () as well as from IFPRI IRB ().
+ Research Ethics Committee (MAKSSREC 01.23.627/PR1) as well as from IFPRI
+ IRB (DSGD-23-0108).
  The research was also registered at the Ugandan National Commission for
  Science and Technology ().
 \end_layout

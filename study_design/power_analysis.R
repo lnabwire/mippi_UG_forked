@@ -15,8 +15,8 @@ library(clubSandwich)
 set.seed(1492023) #set seed to date
 (setVar <- iccRE(ICC = 0.10, dist = "binary"))
 #run in /home/bjvca/data/projects/OneCG/MIPP/study_design/
-N_villages <- seq(from=60, to=120, by=5)     # The sample sizes we'll be considering
-n_farmers_per_village <- seq(from=10, to=30, by=5)
+N_villages <- seq(from=150, to=250, by=5)     # The sample sizes we'll be considering
+n_farmers_per_village <- seq(from=10, to=10, by=10)
 power <- matrix(NA, length(N_villages),length(n_farmers_per_village))           # Empty object to collect simulation estimates
 power_H1 <- matrix(NA, length(N_villages),length(n_farmers_per_village))           # Empty object to collect simulation estimates
 power_H2 <- matrix(NA, length(N_villages),length(n_farmers_per_village))           # Empty object to collect simulation estimates
