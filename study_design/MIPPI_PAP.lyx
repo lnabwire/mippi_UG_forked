@@ -547,7 +547,7 @@ The two stage pricing design consist of a first stage where farmers are
  that is as close as possible as how this happens in a real life setting
  where bargaining is the norm.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 The initial plan (and how this was initially pre-registered) was to do this
@@ -569,8 +569,9 @@ literal "false"
 
 \end_inset
 
- The enumerator follows a standard script, stating that the price of seed
- at the agro-input shop in town is 12,000.
+ The enumerator follows a standard script.
+ An initial ask price is randomly drawn, ranging from 12,000 to 9,000, and
+ this price is then presented to the farmer as the price of the bag of seed.
  The enumerator then explains what kind of seed it is and what the advantages
  are.
  The farmer is then encourage to name his/her first price.
@@ -810,6 +811,8 @@ We did not run formal power calculations for the research question related
  to the screening and sunk cost effects; we just take the sample size for
  a treatment cell in the factorial design and add an extra columns to the
  design.
+ To account for potential attrition etc, we will collect information on
+ 2320 households in 232 villages instead of 2220 households in 222 villages.
 \end_layout
 
 \begin_layout Section
