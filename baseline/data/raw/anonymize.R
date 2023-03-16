@@ -64,7 +64,36 @@ dta$rounds[dta$Check2.check.maize.paid.start_neg_10=="Yes"] <- 10
 dta$rounds[dta$Check2.check.maize.paid.start_neg_11=="Yes"] <- 11
 
 ### enumerator gender:
-enumerator_gender <- NA
+# create named vector of enumerator genders
+enumerator_genders <- c(Arnold = "Male", 
+                        Badru = "Male", 
+                       'Businge Penny' = "Female",
+                        Buyera = "Male",
+                        Humphrey = "Male",
+                        Ibanda = "Male",
+                        Kabali = "Female",
+                        Kalule = "Male",
+                        Katumba = "Male",
+                        Khaukha = "Male",
+                        Kibaale = "Female",
+                        Komako = "Male",
+                        Lukabya = "Male",
+                        Mpalanyi = "Female",
+                        Mulabiza = "Female",
+                        Muwata = "Male",
+                        Nakirya = "Female",
+                        Nambi = "Female",
+                        Nambozo = "Female",
+                        Nandhego = "Female",
+                        Nemwa = "Female",
+                        Oboth = "Male",
+                        Segujja = "Male",
+                        Sendaula = "Male",
+                        Wasike = "Male",
+                        Yiga = "Male")
+
+# create new variable in your data frame using the named vector
+dta$enumerator_gender <- enumerator_genders[dta$enumerator]
 
 ## create IDs for district, subcounty, village
 
