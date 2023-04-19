@@ -539,6 +539,17 @@ literal "false"
  purpose) on the price while controlling for the discount gives an estimate
  of the screening effect of the price; regressing outcomes on the discount
  while controlling for the price gives an estimate of the sunk cost effect.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Is Zero a Special Price? Evidence from Child Health Care (#13) Toshiaki
+ Iizuka and Hitoshi Shigeoka
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1455,7 +1466,7 @@ This research received clearance form Makerere's School of Social Sciences
  Research Ethics Committee (MAKSSREC 01.23.627/PR1) as well as from IFPRI
  IRB (DSGD-23-0108).
  The research was also registered at the Ugandan National Commission for
- Science and Technology ().
+ Science and Technology (SS1657ES).
 \end_layout
 
 \begin_layout Section*
