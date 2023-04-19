@@ -1,0 +1,1039 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\LN_2slides_for_Lusaka23\2slides_Lusaka_Apr23.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}19 Apr 2023, 13:53:40
+{txt}
+{com}. 
+. // log using "C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\LN_2slides_for_Lusaka23\2slides_Lusaka_Apr23.txt", replace
+. 
+. import delimited "C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\data\public\baseline.csv", varnames(1) 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
+{res}{p 0 4 2} Note: Unmatched quote while processing row 337; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 338; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 672; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 673; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 697; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 698; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1248; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1249; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1258; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1259; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1327; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1328; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1638; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1640; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{text}(229 vars, 2,327 obs)
+
+{com}. 
+. count
+  {res}2,327
+{txt}
+{com}. sort farmer_id
+{txt}
+{com}. drop if farmer_id == ""
+{txt}(7 observations deleted)
+
+{com}. count // 2320 total sample
+  {res}2,320
+{txt}
+{com}. 
+. // gender of hh_head
+. tab gender // gender of hh_head, 2320 observations
+
+     {txt}gender {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     Female {c |}{res}        475       20.47       20.47
+{txt}       Male {c |}{res}      1,845       79.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. 
+. gen sex = gender
+{txt}
+{com}. replace sex = "1" if sex == "Female"
+{txt}(475 real changes made)
+
+{com}. replace sex = "2" if sex == "Male"
+{txt}(1,845 real changes made)
+
+{com}. label define sex 1 "Female" 2 "Male"
+{txt}
+{com}. destring sex, replace
+{txt}sex: all characters numeric; {res}replaced {txt}as {res}byte
+{txt}
+{com}. label values sex sex
+{txt}
+{com}. label var sex "gender of hh head"
+{txt}
+{com}. tab sex
+
+  {txt}gender of {c |}
+    hh head {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     Female {c |}{res}        475       20.47       20.47
+{txt}       Male {c |}{res}      1,845       79.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. 
+. // % farmers using improved varieties: Q20. Did you use any quality maize seed like **OPV or hybrid seed** in the previous season (Nsambya of 2022) on any of your plots?
+. gen improved = quality_use
+{txt}
+{com}. replace improved = "1" if improved =="Yes"
+{txt}(935 real changes made)
+
+{com}. replace improved = "2" if improved =="No"
+{txt}(1,372 real changes made)
+
+{com}. destring improved, replace
+{txt}improved: all characters numeric; {res}replaced {txt}as {res}byte
+{txt}
+{com}. recode improved (1=1) (nonmissing=0)
+{txt}(1385 changes made to {bf:improved})
+
+{com}. tab improved
+
+   {txt}improved {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      1,385       59.70       59.70
+{txt}          1 {c |}{res}        935       40.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. mean improved
+{res}
+{txt}Mean estimation{col 42}{lalign 13:Number of obs}{col 55} = {res}{ralign 5:2,320}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 4}improved {c |}{col 14}{res}{space 2} .4030172{col 26}{space 2} .0101857{col 37}{space 5} .3830431{col 51}{space 3} .4229913
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean improved, over (sex)
+{res}
+{txt}Mean estimation{col 44}{lalign 13:Number of obs}{col 57} = {res}{ralign 5:2,320}
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 16}{c |}       Mean{col 28}   Std. err.{col 40}     [95% con{col 53}f. interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+c.improved@sex {c |}
+{space 7}Female  {c |}{col 16}{res}{space 2} .2610526{col 28}{space 2} .0201735{col 39}{space 5} .2214926{col 53}{space 3} .3006126
+{txt}{space 9}Male  {c |}{col 16}{res}{space 2} .4395664{col 28}{space 2} .0115583{col 39}{space 5} .4169007{col 53}{space 3} .4622321
+{txt}{hline 15}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. 
+. // which varieties: Q28. What maize variety did you plant in second season (Nsambya) of 2022 on this ${c -(}plot_select_name{c )-} plot?
+. gen varieties = maize_var
+{txt}
+{com}. replace varieties = "1" if varieties == "Bazooka"
+{txt}(159 real changes made)
+
+{com}. replace varieties = "1" if varieties == "KH_series"
+{txt}(7 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Longe_10H"
+{txt}(317 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Longe_6H"
+{txt}(5 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Longe_7H"
+{txt}(17 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Other_hybrid"
+{txt}(100 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Longe_7R_Kayongo-go"
+{txt}(26 real changes made)
+
+{com}. replace varieties = "1" if varieties == "Panner"
+{txt}(1 real change made)
+
+{com}. replace varieties = "1" if varieties == "Wema"
+{txt}(1 real change made)
+
+{com}. replace varieties = "1" if varieties == "DK"
+{txt}(34 real changes made)
+
+{com}. replace varieties = "2" if varieties == "Longe_4"
+{txt}(37 real changes made)
+
+{com}. replace varieties = "2" if varieties == "Longe_5"
+{txt}(303 real changes made)
+
+{com}. replace varieties = "3" if varieties == "Land_Races"
+{txt}(1,207 real changes made)
+
+{com}. replace varieties = "4" if varieties == "98"
+{txt}(106 real changes made)
+
+{com}. 
+. label define varieties 1 "Hybrids" 2 "OPV" 3 "Landraces" 4 "Don't know"
+{txt}
+{com}. destring varieties, replace
+{txt}varieties: all characters numeric; {res}replaced {txt}as {res}byte
+{txt}
+{com}. label values varieties varieties
+{txt}
+{com}. tab varieties // Most farmers use land races (52%), then hybrids (29%), then OPV (15%), the rest--- use other hybrid (5%)
+
+  {txt}varieties {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Hybrids {c |}{res}        667       28.75       28.75
+{txt}        OPV {c |}{res}        340       14.66       43.41
+{txt}  Landraces {c |}{res}      1,207       52.03       95.43
+{txt} Don't know {c |}{res}        106        4.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. tab varieties sex, col nofreq
+
+           {txt}{c |}   gender of hh head
+ varieties {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+   Hybrids {c |}{res}     19.16      31.22 {txt}{c |}{res}     28.75 
+{txt}       OPV {c |}{res}     11.16      15.56 {txt}{c |}{res}     14.66 
+{txt} Landraces {c |}{res}     61.05      49.70 {txt}{c |}{res}     52.03 
+{txt}Don't know {c |}{res}      8.63       3.52 {txt}{c |}{res}      4.57 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. 
+. // used bazooka: Q21. Did you use Bazooka in the second season of **2022 (Nsambya 2022)** on any of your plots? 
+. tab bazo_use
+
+   {txt}bazo_use {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         98 {c |}{res}          8        0.34        0.34
+{txt}         No {c |}{res}        707       30.47       30.82
+{txt}        Yes {c |}{res}        220        9.48       40.30
+{txt}        n/a {c |}{res}      1,385       59.70      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. tab bazo_use sex, col nofreq
+
+           {txt}{c |}   gender of hh head
+  bazo_use {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        98 {c |}{res}      0.00       0.43 {txt}{c |}{res}      0.34 
+{txt}        No {c |}{res}     20.00      33.17 {txt}{c |}{res}     30.47 
+{txt}       Yes {c |}{res}      6.11      10.35 {txt}{c |}{res}      9.48 
+{txt}       n/a {c |}{res}     73.89      56.04 {txt}{c |}{res}     59.70 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. 
+. 
+. // For how long in years have you been using ${c -(}maize_var{c )-}?
+. mean long_var // overall, farmers have used the varieties they reported for 30years
+{res}
+{txt}Mean estimation{col 42}{lalign 13:Number of obs}{col 55} = {res}{ralign 5:2,320}
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{c |}       Mean{col 26}   Std. err.{col 38}     [95% con{col 51}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 4}long_var {c |}{col 14}{res}{space 2} 30.21724{col 26}{space 2} 3.054436{col 37}{space 5} 24.22753{col 51}{space 3} 36.20695
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean long_var, over (sex) 
+{res}
+{txt}Mean estimation{col 44}{lalign 13:Number of obs}{col 57} = {res}{ralign 5:2,320}
+
+{txt}{hline 15}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 16}{c |}       Mean{col 28}   Std. err.{col 40}     [95% con{col 53}f. interval]
+{hline 15}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+c.long_var@sex {c |}
+{space 7}Female  {c |}{col 16}{res}{space 2} 40.42737{col 28}{space 2} 7.689663{col 39}{space 5} 25.34804{col 53}{space 3}  55.5067
+{txt}{space 9}Male  {c |}{col 16}{res}{space 2} 27.58862{col 28}{space 2} 3.289676{col 39}{space 5}  21.1376{col 53}{space 3} 34.03963
+{txt}{hline 15}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}.  
+. mean long_var, over (varieties) // 49 years for landraces; 6 years for hybrids; 14 years for OPVs.
+{res}
+{txt}Mean estimation{col 50}{lalign 13:Number of obs}{col 63} = {res}{ralign 5:2,320}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+c.long_var@varieties {c |}
+{space 12}Hybrids  {c |}{col 22}{res}{space 2} 5.734633{col 34}{space 2} 1.508127{col 45}{space 5} 2.777214{col 59}{space 3} 8.692052
+{txt}{space 16}OPV  {c |}{col 22}{res}{space 2} 13.61765{col 34}{space 2}  5.05778{col 45}{space 5} 3.699403{col 59}{space 3} 23.53589
+{txt}{space 10}Landraces  {c |}{col 22}{res}{space 2} 48.68517{col 34}{space 2} 5.459734{col 45}{space 5}  37.9787{col 59}{space 3} 59.39164
+{txt}{space 9}Don't know  {c |}{col 22}{res}{space 2} 27.22642{col 34}{space 2} 13.19608{col 45}{space 5} 1.349061{col 59}{space 3} 53.10377
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean long_var if sex == 1, over (varieties) 
+{res}
+{txt}Mean estimation{col 52}{lalign 13:Number of obs}{col 65} = {res}{ralign 3:475}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+c.long_var@varieties {c |}
+{space 12}Hybrids  {c |}{col 22}{res}{space 2} 4.945055{col 34}{space 2}  .753723{col 45}{space 5} 3.464003{col 59}{space 3} 6.426107
+{txt}{space 16}OPV  {c |}{col 22}{res}{space 2}  4.09434{col 34}{space 2} .6832349{col 45}{space 5} 2.751796{col 59}{space 3} 5.436884
+{txt}{space 10}Landraces  {c |}{col 22}{res}{space 2} 58.96897{col 34}{space 2} 11.99777{col 45}{space 5} 35.39357{col 59}{space 3} 82.54436
+{txt}{space 9}Don't know  {c |}{col 22}{res}{space 2}       35{col 34}{space 2} 24.16645{col 45}{space 5}-12.48661{col 59}{space 3} 82.48661
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean long_var if sex == 2, over (varieties)
+{res}
+{txt}Mean estimation{col 50}{lalign 13:Number of obs}{col 63} = {res}{ralign 5:1,845}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+c.long_var@varieties {c |}
+{space 12}Hybrids  {c |}{col 22}{res}{space 2} 5.859375{col 34}{space 2} 1.742515{col 45}{space 5} 2.441866{col 59}{space 3} 9.276884
+{txt}{space 16}OPV  {c |}{col 22}{res}{space 2} 15.37631{col 34}{space 2} 5.986329{col 45}{space 5} 3.635612{col 59}{space 3}   27.117
+{txt}{space 10}Landraces  {c |}{col 22}{res}{space 2} 45.43293{col 34}{space 2} 6.103015{col 45}{space 5} 33.46339{col 59}{space 3} 57.40248
+{txt}{space 9}Don't know  {c |}{col 22}{res}{space 2} 22.32308{col 34}{space 2} 15.31961{col 45}{space 5}-7.722527{col 59}{space 3} 52.36868
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. 
+. // period of use for specific varietyplanted
+. gen variety = maize_var
+{txt}
+{com}. 
+. replace variety = "1" if variety == "Bazooka"
+{txt}(159 real changes made)
+
+{com}. replace variety = "2" if variety == "KH_series"
+{txt}(7 real changes made)
+
+{com}. replace variety = "3" if variety == "Longe_10H"
+{txt}(317 real changes made)
+
+{com}. replace variety = "4" if variety == "Longe_6H"
+{txt}(5 real changes made)
+
+{com}. replace variety = "5" if variety == "Longe_7H"
+{txt}(17 real changes made)
+
+{com}. replace variety = "6" if variety == "Other_hybrid"
+{txt}(100 real changes made)
+
+{com}. replace variety = "7" if variety == "Longe_7R_Kayongo-go"
+{txt}(26 real changes made)
+
+{com}. replace variety = "8" if variety == "Panner"
+{txt}(1 real change made)
+
+{com}. replace variety = "9" if variety == "Wema"
+{txt}(1 real change made)
+
+{com}. replace variety = "10" if variety == "DK"
+{txt}(34 real changes made)
+
+{com}. replace variety = "11" if variety == "Longe_4"
+{txt}(37 real changes made)
+
+{com}. replace variety = "12" if variety == "Longe_5"
+{txt}(303 real changes made)
+
+{com}. replace variety = "13" if variety == "Land_Races"
+{txt}(1,207 real changes made)
+
+{com}. destring variety, replace
+{txt}variety: all characters numeric; {res}replaced {txt}as {res}byte
+{txt}
+{com}. 
+. label define variety 1 "Bazooka" 2 "KH_series" 3 "Longe_10H" 4 "Longe_6H" 5 "Longe_7H" 6 "Other_hybrid" 7 "Longe_7R_Kayongo-go" 8 "Panner" 9 "Wema" 10 "DK" 11 "Longe_4" 12 "Longe_5" 13 "Land_Races"
+{txt}
+{com}. 
+. label values variety variety
+{txt}
+{com}. 
+. mean long_var, over (variety) // period (years) that the farmer has used specific varieties
+{res}
+{txt}Mean estimation{col 50}{lalign 13:Number of obs}{col 63} = {res}{ralign 5:2,320}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}c.long_var@variety {c |}
+{space 12}Bazooka  {c |}{col 22}{res}{space 2} 2.194969{col 34}{space 2}  .137499{col 45}{space 5} 1.925335{col 59}{space 3} 2.464602
+{txt}{space 10}KH_series  {c |}{col 22}{res}{space 2} 1.285714{col 34}{space 2} .2857143{col 45}{space 5} .7254321{col 59}{space 3} 1.845996
+{txt}{space 10}Longe_10H  {c |}{col 22}{res}{space 2} 7.031546{col 34}{space 2} 3.145663{col 45}{space 5} .8629395{col 59}{space 3} 13.20015
+{txt}{space 11}Longe_6H  {c |}{col 22}{res}{space 2}      3.6{col 34}{space 2} 1.208305{col 45}{space 5}  1.23053{col 59}{space 3}  5.96947
+{txt}{space 11}Longe_7H  {c |}{col 22}{res}{space 2} 2.941176{col 34}{space 2} .6386486{col 45}{space 5} 1.688795{col 59}{space 3} 4.193558
+{txt}{space 7}Other_hybrid  {c |}{col 22}{res}{space 2}      9.7{col 34}{space 2} 1.153169{col 45}{space 5} 7.438651{col 59}{space 3} 11.96135
+{txt}Longe_7R_Kayongo-go  {c |}{col 22}{res}{space 2} 3.807692{col 34}{space 2} .5948994{col 45}{space 5} 2.641102{col 59}{space 3} 4.974283
+{txt}{space 13}Panner  {c |}{col 22}{res}{space 2}        3{col 34}{space 2}        .{col 45}{space 5}        .{col 59}{space 3}        .
+{txt}{space 15}Wema  {c |}{col 22}{res}{space 2}        1{col 34}{space 2}        .{col 45}{space 5}        .{col 59}{space 3}        .
+{txt}{space 17}DK  {c |}{col 22}{res}{space 2} 2.852941{col 34}{space 2} .5375928{col 45}{space 5} 1.798729{col 59}{space 3} 3.907154
+{txt}{space 12}Longe_4  {c |}{col 22}{res}{space 2} 4.054054{col 34}{space 2} .7186344{col 45}{space 5} 2.644821{col 59}{space 3} 5.463287
+{txt}{space 12}Longe_5  {c |}{col 22}{res}{space 2} 14.78548{col 34}{space 2}   5.6721{col 45}{space 5} 3.662561{col 59}{space 3}  25.9084
+{txt}{space 9}Land_Races  {c |}{col 22}{res}{space 2} 48.68517{col 34}{space 2} 5.459734{col 45}{space 5}  37.9787{col 59}{space 3} 59.39164
+{txt}{space 17}98  {c |}{col 22}{res}{space 2} 27.22642{col 34}{space 2} 13.19608{col 45}{space 5} 1.349061{col 59}{space 3} 53.10377
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean long_var if sex == 1, over (variety) // period (years) that the farmer has used specific varieties, female headed hhs
+{res}
+{txt}Mean estimation{col 52}{lalign 13:Number of obs}{col 65} = {res}{ralign 3:475}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}c.long_var@variety {c |}
+{space 12}Bazooka  {c |}{col 22}{res}{space 2}    1.875{col 34}{space 2} .3145764{col 45}{space 5} 1.256863{col 59}{space 3} 2.493137
+{txt}{space 10}Longe_10H  {c |}{col 22}{res}{space 2} 3.131579{col 34}{space 2} .3640515{col 45}{space 5} 2.416225{col 59}{space 3} 3.846933
+{txt}{space 11}Longe_6H  {c |}{col 22}{res}{space 2}        7{col 34}{space 2}        .{col 45}{space 5}        .{col 59}{space 3}        .
+{txt}{space 11}Longe_7H  {c |}{col 22}{res}{space 2}      1.5{col 34}{space 2}       .5{col 45}{space 5} .5175093{col 59}{space 3} 2.482491
+{txt}{space 7}Other_hybrid  {c |}{col 22}{res}{space 2} 11.16667{col 34}{space 2} 2.368778{col 45}{space 5} 6.512061{col 59}{space 3} 15.82127
+{txt}Longe_7R_Kayongo-go  {c |}{col 22}{res}{space 2} 3.666667{col 34}{space 2} 2.185813{col 45}{space 5}-.6284148{col 59}{space 3} 7.961748
+{txt}{space 13}Panner  {c |}{col 22}{res}{space 2}        3{col 34}{space 2}        .{col 45}{space 5}        .{col 59}{space 3}        .
+{txt}{space 17}DK  {c |}{col 22}{res}{space 2}      1.5{col 34}{space 2}  .341565{col 45}{space 5} .8288311{col 59}{space 3} 2.171169
+{txt}{space 12}Longe_4  {c |}{col 22}{res}{space 2} 2.666667{col 34}{space 2} .4714045{col 45}{space 5} 1.740366{col 59}{space 3} 3.592968
+{txt}{space 12}Longe_5  {c |}{col 22}{res}{space 2} 4.386364{col 34}{space 2} .8123101{col 45}{space 5} 2.790189{col 59}{space 3} 5.982538
+{txt}{space 9}Land_Races  {c |}{col 22}{res}{space 2} 58.96897{col 34}{space 2} 11.99777{col 45}{space 5} 35.39357{col 59}{space 3} 82.54436
+{txt}{space 17}98  {c |}{col 22}{res}{space 2}       35{col 34}{space 2} 24.16645{col 45}{space 5}-12.48661{col 59}{space 3} 82.48661
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. mean long_var if sex == 2, over (variety) // period (years) that the farmer has used specific varieties, male headed hhs
+{res}
+{txt}Mean estimation{col 50}{lalign 13:Number of obs}{col 63} = {res}{ralign 5:1,845}
+
+{txt}{hline 21}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 22}{c |}       Mean{col 34}   Std. err.{col 46}     [95% con{col 59}f. interval]
+{hline 21}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{space 2}c.long_var@variety {c |}
+{space 12}Bazooka  {c |}{col 22}{res}{space 2} 2.230769{col 34}{space 2} .1487637{col 45}{space 5} 1.939006{col 59}{space 3} 2.522532
+{txt}{space 10}KH_series  {c |}{col 22}{res}{space 2} 1.285714{col 34}{space 2} .2857143{col 45}{space 5} .7253568{col 59}{space 3} 1.846072
+{txt}{space 10}Longe_10H  {c |}{col 22}{res}{space 2} 7.562724{col 34}{space 2} 3.573355{col 45}{space 5} .5544773{col 59}{space 3} 14.57097
+{txt}{space 11}Longe_6H  {c |}{col 22}{res}{space 2}     2.75{col 34}{space 2} 1.108678{col 45}{space 5}  .575604{col 59}{space 3} 4.924396
+{txt}{space 11}Longe_7H  {c |}{col 22}{res}{space 2} 3.133333{col 34}{space 2} .7095717{col 45}{space 5} 1.741685{col 59}{space 3} 4.524982
+{txt}{space 7}Other_hybrid  {c |}{col 22}{res}{space 2} 9.236842{col 34}{space 2} 1.324515{col 45}{space 5} 6.639135{col 59}{space 3} 11.83455
+{txt}Longe_7R_Kayongo-go  {c |}{col 22}{res}{space 2} 3.826087{col 34}{space 2} .6307414{col 45}{space 5} 2.589045{col 59}{space 3} 5.063129
+{txt}{space 15}Wema  {c |}{col 22}{res}{space 2}        1{col 34}{space 2}        .{col 45}{space 5}        .{col 59}{space 3}        .
+{txt}{space 17}DK  {c |}{col 22}{res}{space 2} 3.142857{col 34}{space 2} .6376924{col 45}{space 5} 1.892182{col 59}{space 3} 4.393532
+{txt}{space 12}Longe_4  {c |}{col 22}{res}{space 2}      4.5{col 34}{space 2} .9265342{col 45}{space 5} 2.682834{col 59}{space 3} 6.317166
+{txt}{space 12}Longe_5  {c |}{col 22}{res}{space 2} 16.55212{col 34}{space 2}  6.62988{col 45}{space 5} 3.549262{col 59}{space 3} 29.55499
+{txt}{space 9}Land_Races  {c |}{col 22}{res}{space 2} 45.43293{col 34}{space 2} 6.103015{col 45}{space 5} 33.46339{col 59}{space 3} 57.40248
+{txt}{space 17}98  {c |}{col 22}{res}{space 2} 22.32308{col 34}{space 2} 15.31961{col 45}{space 5}-7.722527{col 59}{space 3} 52.36868
+{txt}{hline 21}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. 
+. save "C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\LN_2slides_for_Lusaka23\2slides_Lusaka_Apr23.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\LN_2slides_for_Lusaka23\2slides_Lusaka_Apr23.dta{rm}
+saved
+{p_end}
+
+{com}. 
+. // Why farm households are using these varieties (also gender-disaggregated) // used 2019 dataset. The subsequent surveys did not have this question
+. clear
+{txt}
+{com}. import delimited "C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Dairy_Ug\USAID_SME_project\Country folders\Uganda maize\data\public\wave_0\farmers.csv", varnames(1) 
+{res}{txt}(encoding automatically selected: ISO-8859-1)
+{res}{p 0 4 2} Note: Unmatched quote while processing row 1065; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1066; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1122; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{p 0 4 2} Note: Unmatched quote while processing row 1123; this can be due to a formatting problem in the file or because a quoted data element spans multiple lines. You should carefully inspect your data after importing. Consider using option bindquote(strict) if quoted data spans multiple lines or option bindquote(nobind) if quotes are not used for binding data.{p_end}
+{text}(426 vars, 1,529 obs)
+
+{com}. 
+. count
+  {res}1,529
+{txt}
+{com}. sort id
+{txt}
+{com}. ed
+{txt}
+{com}. drop if date == ""
+{txt}(2 observations deleted)
+
+{com}. 
+. 
+. // rating the importance (1 to 5) of the reasons for using the a given variety on a given plot 
+. 
+. // First, varieties planted on the selected plot in 2018
+. replace hhmaizemaizenq48 = "1" if hhmaizemaizenq48 == "a"
+{txt}(254 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "2" if hhmaizemaizenq48 == "b"
+{txt}(43 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "3" if hhmaizemaizenq48 == "c"
+{txt}(32 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "4" if hhmaizemaizenq48 == "d"
+{txt}(5 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "5" if hhmaizemaizenq48 == "e"
+{txt}(9 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "6" if hhmaizemaizenq48 == "f"
+{txt}(353 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "7" if hhmaizemaizenq48 == "g"
+{txt}(75 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "8" if hhmaizemaizenq48 == "h"
+{txt}(4 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "9" if hhmaizemaizenq48 == "i"
+{txt}(2 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "10" if hhmaizemaizenq48 == "j"
+{txt}(25 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "11" if hhmaizemaizenq48 == "k"
+{txt}(480 real changes made)
+
+{com}. replace hhmaizemaizenq48 = "12" if hhmaizemaizenq48 == "l"
+{txt}(141 real changes made)
+
+{com}. 
+. destring hhmaizemaizenq48, replace
+{txt}hhmaizemaizenq48: all characters numeric; {res}replaced {txt}as {res}byte
+{txt}
+{com}. 
+. rename hhmaizemaizenq48 variety
+{res}{txt}
+{com}. label define variety 1 "Longe 10H" 2 "Longe 7H" 3 "Longe 7R/Kayongo-go" 4 "Bazooka" 5 "Longe 6H" 6 "Longe 5 (nalongo)" 7 "Longe 4" 8 "Panner" 9 "Wema" 10 "KH series" 11 "Land Races/local varieties" 12 "Others" 98 "Don't know"
+{txt}
+{com}. label values variety variety
+{txt}
+{com}. // variety planted on the selected plot
+. tab variety
+
+       {txt}hh.maize.maizen.q48 {c |}      Freq.     Percent        Cum.
+{hline 27}{c +}{hline 35}
+                 Longe 10H {c |}{res}        254       16.63       16.63
+{txt}                  Longe 7H {c |}{res}         43        2.82       19.45
+{txt}       Longe 7R/Kayongo-go {c |}{res}         32        2.10       21.55
+{txt}                   Bazooka {c |}{res}          5        0.33       21.87
+{txt}                  Longe 6H {c |}{res}          9        0.59       22.46
+{txt}         Longe 5 (nalongo) {c |}{res}        353       23.12       45.58
+{txt}                   Longe 4 {c |}{res}         75        4.91       50.49
+{txt}                    Panner {c |}{res}          4        0.26       50.75
+{txt}                      Wema {c |}{res}          2        0.13       50.88
+{txt}                 KH series {c |}{res}         25        1.64       52.52
+{txt}Land Races/local varieties {c |}{res}        480       31.43       83.96
+{txt}                    Others {c |}{res}        141        9.23       93.19
+{txt}                Don't know {c |}{res}        104        6.81      100.00
+{txt}{hline 27}{c +}{hline 35}
+                     Total {c |}{res}      1,527      100.00
+{txt}
+{com}. 
+. // rating the importance (1 to 5) of the reasons for using the a given variety on a given plot 
+. rename hhmaizemaizenq51a highyield_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51b drought_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51c pestdisease_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51d earlymaturing_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51e highMktPx_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51f goodtaste_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51g lowprice_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51h availability_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51i germination_m
+{res}{txt}
+{com}. rename hhmaizemaizenq51j experience_m
+{res}{txt}
+{com}. 
+. label var highyield_m "High yield"
+{txt}
+{com}. label var drought_m "Drought tolerant"
+{txt}
+{com}. lab var pestdisease_m "Pest/disease tolerant"
+{txt}
+{com}. lab var earlymaturing_m "Early maturing"
+{txt}
+{com}. lab var highMktPx_m "High market price"
+{txt}
+{com}. lab var highMktPx_m "Higher market price/demand"
+{txt}
+{com}. lab var goodtaste_m "Good taste or high nutrition"
+{txt}
+{com}. lab var lowprice_m "Low price for seed"
+{txt}
+{com}. lab var availability_m "Availability"
+{txt}
+{com}. lab var germination_m "Germination rate"
+{txt}
+{com}. lab var experience_m "Experience(knows and trust the quality"
+{txt}
+{com}. 
+. 
+. // 2018 mean ratings of the reasons for using a given variety
+. sum highyield_m- experience_m // overall sample
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}      1,527    3.474132    1.041954          1          5
+{txt}{space 3}drought_m {c |}{res}      1,527    3.027505     1.09474          1          5
+{txt}pestdiseas~m {c |}{res}      1,527    2.493124    1.187991          1          5
+{txt}earlymatur~m {c |}{res}      1,527    3.640472    1.066473          1          5
+{txt}{space 1}highMktPx_m {c |}{res}      1,527    3.520629     1.14628          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}      1,527    4.191225    .9934789          1          5
+{txt}{space 2}lowprice_m {c |}{res}      1,527    3.165684     1.27201          1          5
+{txt}availabili~m {c |}{res}      1,527    3.902423    1.114206          1          5
+{txt}germinatio~m {c |}{res}      1,527    3.800917    1.050956          1          5
+{txt}experience_m {c |}{res}      1,527    4.005239    .9967043          1          5
+{txt}
+{com}. sum highyield_m- experience_m if hhmaizeq25 == "Female"
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}        746    3.495979    1.033978          1          5
+{txt}{space 3}drought_m {c |}{res}        746    3.004021    1.081255          1          5
+{txt}pestdiseas~m {c |}{res}        746    2.490617    1.147179          1          5
+{txt}earlymatur~m {c |}{res}        746    3.632708     1.06523          1          5
+{txt}{space 1}highMktPx_m {c |}{res}        746    3.457105    1.134645          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}        746    4.227882    .9562651          1          5
+{txt}{space 2}lowprice_m {c |}{res}        746    3.202413    1.269379          1          5
+{txt}availabili~m {c |}{res}        746    3.883378    1.124978          1          5
+{txt}germinatio~m {c |}{res}        746    3.794906    1.022971          1          5
+{txt}experience_m {c |}{res}        746    3.983914    .9856739          1          5
+{txt}
+{com}. sum highyield_m- experience_m if hhmaizeq25 == "Male"
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}        781    3.453265    1.049752          1          5
+{txt}{space 3}drought_m {c |}{res}        781    3.049936    1.107696          1          5
+{txt}pestdiseas~m {c |}{res}        781    2.495519    1.226437          1          5
+{txt}earlymatur~m {c |}{res}        781    3.647887    1.068289          1          5
+{txt}{space 1}highMktPx_m {c |}{res}        781    3.581306    1.154749          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}        781     4.15621    1.027158          1          5
+{txt}{space 2}lowprice_m {c |}{res}        781    3.130602    1.274342          1          5
+{txt}availabili~m {c |}{res}        781    3.920615    1.104233          1          5
+{txt}germinatio~m {c |}{res}        781    3.806658    1.077631          1          5
+{txt}experience_m {c |}{res}        781    4.025608    1.007337          1          5
+{txt}
+{com}. 
+. // per variety: 2018 mean ratings of the reasons for using a given variety 
+. sum highyield_m- experience_m if variety == 1 // Longe 10H
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}        254    3.751969    .8877159          1          5
+{txt}{space 3}drought_m {c |}{res}        254    3.338583    1.027068          1          5
+{txt}pestdiseas~m {c |}{res}        254    2.661417    1.177661          1          5
+{txt}earlymatur~m {c |}{res}        254    4.047244    .8878474          1          5
+{txt}{space 1}highMktPx_m {c |}{res}        254    3.740157    1.086843          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}        254    4.185039    .9415804          1          5
+{txt}{space 2}lowprice_m {c |}{res}        254    3.023622    1.189311          1          5
+{txt}availabili~m {c |}{res}        254    3.744094    1.085962          1          5
+{txt}germinatio~m {c |}{res}        254    3.996063    .9960318          1          5
+{txt}experience_m {c |}{res}        254    3.940945    .9902971          1          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 2 // Longe 7H
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}         43    3.581395    1.096153          1          5
+{txt}{space 3}drought_m {c |}{res}         43           3    1.091089          1          5
+{txt}pestdiseas~m {c |}{res}         43    2.209302    1.081404          1          5
+{txt}earlymatur~m {c |}{res}         43    4.069767    .9854984          1          5
+{txt}{space 1}highMktPx_m {c |}{res}         43     3.27907    1.201697          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}         43    4.023256    .9877433          1          5
+{txt}{space 2}lowprice_m {c |}{res}         43    2.906977    1.376918          1          5
+{txt}availabili~m {c |}{res}         43    3.860465    1.125069          1          5
+{txt}germinatio~m {c |}{res}         43    3.930233    .9854984          1          5
+{txt}experience_m {c |}{res}         43           4    .7867958          2          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 3 // Longe 7R/Kayongo-go
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}         32           4    .8424235          2          5
+{txt}{space 3}drought_m {c |}{res}         32     3.28125    1.442095          1          5
+{txt}pestdiseas~m {c |}{res}         32      2.3125    1.401324          1          5
+{txt}earlymatur~m {c |}{res}         32     3.90625    1.117583          1          5
+{txt}{space 1}highMktPx_m {c |}{res}         32     3.71875    1.084625          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}         32     4.15625     .766617          2          5
+{txt}{space 2}lowprice_m {c |}{res}         32     3.15625    1.194325          1          5
+{txt}availabili~m {c |}{res}         32      3.3125    1.281066          1          5
+{txt}germinatio~m {c |}{res}         32     3.71875    .9240296          1          5
+{txt}experience_m {c |}{res}         32     3.65625    .9708452          2          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 4 // Bazooka
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}          5         4.2    .4472136          4          5
+{txt}{space 3}drought_m {c |}{res}          5         3.4    1.516575          1          5
+{txt}pestdiseas~m {c |}{res}          5         2.4    .8944272          1          3
+{txt}earlymatur~m {c |}{res}          5         4.6    .5477226          4          5
+{txt}{space 1}highMktPx_m {c |}{res}          5         3.4    1.516575          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}          5         4.4    .5477226          4          5
+{txt}{space 2}lowprice_m {c |}{res}          5           2           1          1          3
+{txt}availabili~m {c |}{res}          5         3.4    1.516575          1          5
+{txt}germinatio~m {c |}{res}          5         4.2      .83666          3          5
+{txt}experience_m {c |}{res}          5         3.8      .83666          3          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 5 // Longe 6H
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}          9    3.555556    .5270463          3          4
+{txt}{space 3}drought_m {c |}{res}          9    3.222222    .6666667          2          4
+{txt}pestdiseas~m {c |}{res}          9    2.444444    1.333333          1          5
+{txt}earlymatur~m {c |}{res}          9    3.555556    1.130388          2          5
+{txt}{space 1}highMktPx_m {c |}{res}          9    3.888889    .9279607          3          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}          9    4.333333    .7071068          3          5
+{txt}{space 2}lowprice_m {c |}{res}          9    2.888889    .9279607          1          4
+{txt}availabili~m {c |}{res}          9    4.111111     .781736          3          5
+{txt}germinatio~m {c |}{res}          9    4.111111     .781736          3          5
+{txt}experience_m {c |}{res}          9    3.888889     .781736          3          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 6 // Longe 5 (nalongo)
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}        353    3.504249    1.011642          1          5
+{txt}{space 3}drought_m {c |}{res}        353    2.974504    1.034587          1          5
+{txt}pestdiseas~m {c |}{res}        353    2.376771    1.119164          1          5
+{txt}earlymatur~m {c |}{res}        353     3.84136    .9491565          1          5
+{txt}{space 1}highMktPx_m {c |}{res}        353    3.458924    1.127717          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}        353    3.968839    1.123935          1          5
+{txt}{space 2}lowprice_m {c |}{res}        353    3.016997    1.186929          1          5
+{txt}availabili~m {c |}{res}        353    3.872521       1.112          1          5
+{txt}germinatio~m {c |}{res}        353    3.790368    1.017583          1          5
+{txt}experience_m {c |}{res}        353    3.827195    1.047805          1          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 7 // Longe 4
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}         75    3.346667    1.084203          1          5
+{txt}{space 3}drought_m {c |}{res}         75        2.68     1.15267          1          5
+{txt}pestdiseas~m {c |}{res}         75    2.426667    1.221135          1          5
+{txt}earlymatur~m {c |}{res}         75    3.853333    .9821836          1          5
+{txt}{space 1}highMktPx_m {c |}{res}         75    3.453333     1.20015          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}         75    3.933333      1.2006          1          5
+{txt}{space 2}lowprice_m {c |}{res}         75        2.96      1.2018          1          5
+{txt}availabili~m {c |}{res}         75        3.76    1.239442          1          5
+{txt}germinatio~m {c |}{res}         75    3.786667    1.017327          1          5
+{txt}experience_m {c |}{res}         75         3.8    1.150793          1          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 8 // Panner
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}          4           4           2          1          5
+{txt}{space 3}drought_m {c |}{res}          4         3.5           1          2          4
+{txt}pestdiseas~m {c |}{res}          4        2.75    1.258306          1          4
+{txt}earlymatur~m {c |}{res}          4           5           0          5          5
+{txt}{space 1}highMktPx_m {c |}{res}          4         4.5    .5773503          4          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}          4        4.75          .5          4          5
+{txt}{space 2}lowprice_m {c |}{res}          4        2.75    1.258306          1          4
+{txt}availabili~m {c |}{res}          4           3    1.414214          1          4
+{txt}germinatio~m {c |}{res}          4           5           0          5          5
+{txt}experience_m {c |}{res}          4        4.75          .5          4          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 9 // Wema
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}          2         4.5    .7071068          4          5
+{txt}{space 3}drought_m {c |}{res}          2         3.5    .7071068          3          4
+{txt}pestdiseas~m {c |}{res}          2         4.5    .7071068          4          5
+{txt}earlymatur~m {c |}{res}          2           3    1.414214          2          4
+{txt}{space 1}highMktPx_m {c |}{res}          2           3    1.414214          2          4
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}          2         4.5    .7071068          4          5
+{txt}{space 2}lowprice_m {c |}{res}          2           4    1.414214          3          5
+{txt}availabili~m {c |}{res}          2           5           0          5          5
+{txt}germinatio~m {c |}{res}          2         3.5     2.12132          2          5
+{txt}experience_m {c |}{res}          2           5           0          5          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 10 // KH series
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}         25        3.64    1.036018          1          5
+{txt}{space 3}drought_m {c |}{res}         25        2.84    1.143095          1          5
+{txt}pestdiseas~m {c |}{res}         25        2.68    1.314027          1          5
+{txt}earlymatur~m {c |}{res}         25        3.84    1.067708          1          5
+{txt}{space 1}highMktPx_m {c |}{res}         25        3.76    1.090871          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}         25        4.28    .9363048          2          5
+{txt}{space 2}lowprice_m {c |}{res}         25        3.16    1.312758          1          5
+{txt}availabili~m {c |}{res}         25           3    1.224745          1          5
+{txt}germinatio~m {c |}{res}         25        3.88    1.201388          1          5
+{txt}experience_m {c |}{res}         25        3.88    1.053565          2          5
+{txt}
+{com}. sum highyield_m- experience_m if variety == 11 // Land Races/local varieties
+
+{txt}    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 1}highyield_m {c |}{res}        480      3.3125    1.062872          1          5
+{txt}{space 3}drought_m {c |}{res}        480    2.977083    1.089663          1          5
+{txt}pestdiseas~m {c |}{res}        480    2.489583    1.225978          1          5
+{txt}earlymatur~m {c |}{res}        480    3.279167    1.087595          1          5
+{txt}{space 1}highMktPx_m {c |}{res}        480      3.5625    1.150588          1          5
+{txt}{hline 13}{c +}{hline 57}
+{space 1}goodtaste_m {c |}{res}        480     4.41875    .8606829          1          5
+{txt}{space 2}lowprice_m {c |}{res}        480    3.352083    1.398999          1          5
+{txt}availabili~m {c |}{res}        480    4.145833     1.03568          1          5
+{txt}germinatio~m {c |}{res}        480    3.702083    1.102661          1          5
+{txt}experience_m {c |}{res}        480    4.214583    .9010524          1          5
+{txt}
+{com}. 
+. 
+. // recycling of seed: Q30. How often was this ${c -(}maize_var{c )-}  that was used on **${c -(}plot_select_name{c )-}** in the second season (Nsambya) of 2022 recycled?
+. use "C:\Users\LNabwire\OneDrive - CGIAR\L.Nabwire\git\Maize_Uganda\mippi_UG_forked\baseline\LN_2slides_for_Lusaka23\2slides_Lusaka_Apr23.dta", clear 
+{txt}
+{com}. 
+. tab often
+
+      {txt}often {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         98 {c |}{res}         93        4.01        4.01
+{txt}          a {c |}{res}         23        0.99        5.00
+{txt}          b {c |}{res}        167        7.20       12.20
+{txt}          c {c |}{res}         79        3.41       15.60
+{txt}          d {c |}{res}        115        4.96       20.56
+{txt}          e {c |}{res}         58        2.50       23.06
+{txt}          f {c |}{res}        987       42.54       65.60
+{txt}        n/a {c |}{res}        798       34.40      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,320      100.00
+{txt}
+{com}. tab often sex, col nofreq
+
+           {txt}{c |}   gender of hh head
+     often {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        98 {c |}{res}      4.63       3.85 {txt}{c |}{res}      4.01 
+{txt}         a {c |}{res}      1.26       0.92 {txt}{c |}{res}      0.99 
+{txt}         b {c |}{res}      6.95       7.26 {txt}{c |}{res}      7.20 
+{txt}         c {c |}{res}      2.74       3.58 {txt}{c |}{res}      3.41 
+{txt}         d {c |}{res}      3.79       5.26 {txt}{c |}{res}      4.96 
+{txt}         e {c |}{res}      1.68       2.71 {txt}{c |}{res}      2.50 
+{txt}         f {c |}{res}     56.63      38.92 {txt}{c |}{res}     42.54 
+{txt}       n/a {c |}{res}     22.32      37.51 {txt}{c |}{res}     34.40 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. tab often if varieties == 1
+
+      {txt}often {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         98 {c |}{res}         11        1.65        1.65
+{txt}          a {c |}{res}          6        0.90        2.55
+{txt}          b {c |}{res}         69       10.34       12.89
+{txt}          c {c |}{res}         15        2.25       15.14
+{txt}          d {c |}{res}         11        1.65       16.79
+{txt}          e {c |}{res}          7        1.05       17.84
+{txt}          f {c |}{res}         52        7.80       25.64
+{txt}        n/a {c |}{res}        496       74.36      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        667      100.00
+{txt}
+{com}. tab often sex if varieties == 1, col nofreq
+
+           {txt}{c |}   gender of hh head
+     often {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        98 {c |}{res}      1.10       1.74 {txt}{c |}{res}      1.65 
+{txt}         a {c |}{res}      1.10       0.87 {txt}{c |}{res}      0.90 
+{txt}         b {c |}{res}     12.09      10.07 {txt}{c |}{res}     10.34 
+{txt}         c {c |}{res}      1.10       2.43 {txt}{c |}{res}      2.25 
+{txt}         d {c |}{res}      0.00       1.91 {txt}{c |}{res}      1.65 
+{txt}         e {c |}{res}      0.00       1.22 {txt}{c |}{res}      1.05 
+{txt}         f {c |}{res}     19.78       5.90 {txt}{c |}{res}      7.80 
+{txt}       n/a {c |}{res}     64.84      75.87 {txt}{c |}{res}     74.36 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. 
+. tab often if varieties == 2
+
+      {txt}often {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         98 {c |}{res}          5        1.47        1.47
+{txt}          a {c |}{res}          2        0.59        2.06
+{txt}          b {c |}{res}         41       12.06       14.12
+{txt}          c {c |}{res}         22        6.47       20.59
+{txt}          d {c |}{res}         13        3.82       24.41
+{txt}          e {c |}{res}          5        1.47       25.88
+{txt}          f {c |}{res}         42       12.35       38.24
+{txt}        n/a {c |}{res}        210       61.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        340      100.00
+{txt}
+{com}. tab often sex if varieties == 2, col nofreq
+
+           {txt}{c |}   gender of hh head
+     often {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        98 {c |}{res}      0.00       1.74 {txt}{c |}{res}      1.47 
+{txt}         a {c |}{res}      1.89       0.35 {txt}{c |}{res}      0.59 
+{txt}         b {c |}{res}     18.87      10.80 {txt}{c |}{res}     12.06 
+{txt}         c {c |}{res}      9.43       5.92 {txt}{c |}{res}      6.47 
+{txt}         d {c |}{res}      3.77       3.83 {txt}{c |}{res}      3.82 
+{txt}         e {c |}{res}      1.89       1.39 {txt}{c |}{res}      1.47 
+{txt}         f {c |}{res}     20.75      10.80 {txt}{c |}{res}     12.35 
+{txt}       n/a {c |}{res}     43.40      65.16 {txt}{c |}{res}     61.76 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. 
+. tab often if varieties == 3
+
+      {txt}often {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         98 {c |}{res}         68        5.63        5.63
+{txt}          a {c |}{res}         10        0.83        6.46
+{txt}          b {c |}{res}         45        3.73       10.19
+{txt}          c {c |}{res}         40        3.31       13.50
+{txt}          d {c |}{res}         85        7.04       20.55
+{txt}          e {c |}{res}         44        3.65       24.19
+{txt}          f {c |}{res}        856       70.92       95.11
+{txt}        n/a {c |}{res}         59        4.89      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,207      100.00
+{txt}
+{com}. tab often sex if varieties == 3, col nofreq
+
+           {txt}{c |}   gender of hh head
+     often {c |}    Female       Male {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        98 {c |}{res}      5.52       5.67 {txt}{c |}{res}      5.63 
+{txt}         a {c |}{res}      0.69       0.87 {txt}{c |}{res}      0.83 
+{txt}         b {c |}{res}      3.10       3.93 {txt}{c |}{res}      3.73 
+{txt}         c {c |}{res}      2.07       3.71 {txt}{c |}{res}      3.31 
+{txt}         d {c |}{res}      4.83       7.74 {txt}{c |}{res}      7.04 
+{txt}         e {c |}{res}      2.07       4.14 {txt}{c |}{res}      3.65 
+{txt}         f {c |}{res}     76.55      69.14 {txt}{c |}{res}     70.92 
+{txt}       n/a {c |}{res}      5.17       4.80 {txt}{c |}{res}      4.89 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+{txt}
+{com}. 
+. 
+. // Attribute of Bazooka: Please rate this  particular ${c -(}maize_var{c )-} seed you used on ${c -(}plot_select_name{c )-} plot in the second season (Nsambya) of 2022, on these dimensions:
+. destring gen_qlty- cook, replace ignore ("n/a")
+{txt}gen_qlty already numeric; no {res}replace
+{txt}yield_rate already numeric; no {res}replace
+{txt}drt_tol already numeric; no {res}replace
+{txt}dies_tol already numeric; no {res}replace
+{txt}erly_mat already numeric; no {res}replace
+{txt}mrkt_dem already numeric; no {res}replace
+{txt}taste already numeric; no {res}replace
+{txt}price_rate already numeric; no {res}replace
+{txt}avail already numeric; no {res}replace
+{txt}germ_rate already numeric; no {res}replace
+{txt}cook already numeric; no {res}replace
+{txt}
+{com}. destring group4gen_qlty1 - group4germ_rate1, replace ignore ("n/a")
+{txt}group4gen_qlty1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4yield_rate1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4drt_tol1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4dies_tol1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4erly_mat1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4mrkt_dem1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4taste1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4price_rate1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4avail1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}group4germ_rate1: characters{res} n / a{txt} removed; {res}replaced {txt}as {res}byte
+{txt}(2167 missing values generated)
+{res}{txt}
+{com}. 
+. gen bazo_genQlty = group4gen_qlty1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_yield = group4yield_rate1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_drt = group4drt_tol1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_dies = group4dies_tol1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_early = group4erly_mat1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_mkt = group4mrkt_dem1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_taste = group4taste1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_price = group4price_rate1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_avail = group4avail1
+{txt}(2,167 missing values generated)
+
+{com}. gen bazo_germ = group4germ_rate1
+{txt}(2,167 missing values generated)
+
+{com}. 
+. replace bazo_genQlty = gen_qlty if bazo_genQlty == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_yield = yield_rate if bazo_yield == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_drt = drt_tol if bazo_drt == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_dies = dies_tol if bazo_dies == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_early = erly_mat if bazo_early == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_mkt = mrkt_dem if bazo_mkt == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_taste = taste if bazo_taste == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_price = price_rate if bazo_price == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_avail = avail if bazo_avail == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. replace bazo_germ = germ_rate if bazo_germ == . & variety == 1
+{txt}(159 real changes made)
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+{txt}end of do-file
+
+{com}. 
