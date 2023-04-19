@@ -557,48 +557,53 @@ The two stage pricing design consist of a first stage where farmers are
  offered the opportunity to buy a bag of seed from the enumerator in a way
  that is as close as possible as how this happens in a real life setting
  where bargaining is the norm.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-The initial plan (and how this was initially pre-registered) was to do this
- using a Becker-DeGroot-Marschak (BDM) auction.
- A standard BDM auction is essentially a two-stage pricing design and can
- be used to disentangle the sunk cost and screening effects 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "doi:10.1086/705374"
-literal "false"
-
-\end_inset
-
-.
- However, after testing in the field, we found that too many farmers had
- problems comprehending the procedure, struggling especially with the fact
- that they could not bargain over the price.
-\end_layout
-
-\end_inset
-
  The enumerator follows a standard script.
  An initial ask price is randomly drawn, ranging from 12,000 to 9,000, and
  this price is then presented to the farmer as the price of the bag of seed.
  The enumerator then explains what kind of seed it is and what the advantages
  are.
- The farmer is then encourage to name his/her first price.
- A computer algorithm then determines a counter-offer that the enumerator
- asks, reemphasizing why the first price was too low.
- The farmer can then make a second bid.
- Bargaining continues until the price difference between the bid and ask
- price falls below a certain threshold (eg 1000) in which case the computer
- instructs the enumerator to indicate that this is his/her last price.
- The farmer can then decide to buy.
- If the farmer does not want to buy we will still sell the seed at the last
- bid made by the farmer.
- To make the bargaining also incentive compatible for the enumerators, we
+ The farmer has the option to accept this price or not.
+ If the farmer does not accept the ask price, then the farmer is encouraged
+ to name his/her first bid price.
+\end_layout
+
+\begin_layout Standard
+A computer algorithm then determines a counter-offer that the enumerator
+ asks in a second round of negotiation.
+ This new ask price is determined as the farmer's bid price plus 80 percent
+ of the difference between the (initial) ask price and the farmer's bid
+ price, and this is rounded to the nearest multiple of 500.
+ This updated (lower) ask price is then presented to the farmer and the
+ farmer gets another opportunity to accept or not.
+ If the farmer does not accept, he or she is encouraged to make a second
+ bid and a third ask price is determined as the farmer's last bid price
+ plus 80 percent of the difference between the last ask price and the farmer's
+ last bid price.
+ Bargaining continues until the farmer accepts an ask price, or the price
+ difference between the bid and ask price is smaller than 500 ugandan shilling,
+ in which case the computer instructs the enumerator sell at the last price
+ the farmer bids.
+\end_layout
+
+\begin_layout Standard
+To make the bargaining also incentive compatible for the enumerators, we
  tell them in advance that the money that is collected from farmers during
  this first stage will be divided and distributed equally among all the
  enumerators.
+\end_layout
+
+\begin_layout Standard
+A popular alternative way to measure willingness to pay is a Becker-DeGroot-Mars
+chak (BDM) auction.
+ In it simplest version, the subject formulates a bid and this bid is compared
+ to a price determined by a random number generator.
+ If the subject's bid is greater than the price, they pay the price and
+ receives the item being auctioned.
+ If the subject's bid is lower than the price, they pay nothing and receive
+ nothing.
+ However, after testing in the field, we found that too many farmers had
+ problems comprehending the procedure, struggling especially with the fact
+ that they could not bargain over the price.
 \end_layout
 
 \begin_layout Standard
